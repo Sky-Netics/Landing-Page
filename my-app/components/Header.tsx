@@ -1,45 +1,50 @@
+"use client"
+
+import React from "react"
 import Image from "next/image"
-import { IoIosArrowDown, IoIosSearch } from "react-icons/io"
-import { FaTwitter, FaFacebook, FaInstagram, FaPinterest } from "react-icons/fa"
-import { MdOutlineShoppingCart, MdPhoneInTalk, MdOutlineMenu } from "react-icons/md"
+import { BiSolidPhoneCall } from "react-icons/bi"
+import { FaCircleQuestion } from "react-icons/fa6"
 
 export const Header: React.FC= () =>{
+    const [active, setActive] = React.useState('HOME');
+
+    const menu= [
+        "HOME",
+        "ABOUT",
+        "COLLECTION",
+        "SHOP",
+        "RECYCLE SOLUTION",
+        "CONTACT US"
+    ]
+    
     return(
-        <header className="md:h-32 py-1 flex justify-between items-center px-2 absolute top-0 z-10 w-full md:bg-transparent lg:border-b border-b-gray-400">
+        <header className="h-32 flex items-center justify-between absolute top-0 w-full z-10 px-10">
             <Image src="/logo.png" width={170} height={51} alt="Logo"/>
-            <div className="flex gap-x-2 text-white">
-                <div className="p-2 rounded-full bg-gray-400 opacity-50 cursor-pointer hover:opacity-90">
-                    <FaTwitter/>
-                </div>
-                <div className="p-2 rounded-full bg-gray-400 opacity-50 cursor-pointer hover:opacity-90">
-                    <FaFacebook/>
-                </div>
-                <div className="p-2 rounded-full bg-gray-400 opacity-50 cursor-pointer hover:opacity-90">
-                    <FaInstagram/>
-                </div>
-                <div className="p-2 rounded-full bg-gray-400 opacity-50 cursor-pointer hover:opacity-90">
-                    <FaPinterest/>
-                </div>
-            </div>
-            <ul className="hidden items-center gap-x-10 text-white lg:flex lg:gap-x-5 xl:gap-x-10">
-                <li className="flex items-center gap-x-0.5">Home <IoIosArrowDown className="text-sm"/></li>
-                <li>About</li>
-                <li className="flex items-center gap-x-0.5">Services <IoIosArrowDown className="text-sm"/></li>
-                <li className="flex items-center gap-x-0.5">Projects <IoIosArrowDown className="text-sm"/></li>
-                <li className="flex items-center gap-x-0.5">News <IoIosArrowDown className="text-sm"/></li>
-                <li className="flex items-center gap-x-0.5">Shop <IoIosArrowDown className="text-sm"/></li>
-                <li>Contact</li>
-            </ul>
-            <div className="text-white text-2xl sm:flex items-center hidden sm:gap-x-5 border-l-2 border-l-gray-400 pl-5">
-                <IoIosSearch/>
-                <div className="relative">
-                    <MdOutlineShoppingCart/>
-                    <span className="bg-green-500 text-xl rounded-full absolute top-[-5px] right-[-5px] size-4 flex justify-center items-center">0</span>
-                </div>
-                <MdPhoneInTalk className="text-yellow-500 text-3xl border-2 border-yellow-500 p-1 rounded-full"/>
-            </div>
-            <div className="bg-white text-2xl rounded-md cursor-pointer sm:hidden hover:bg-black hover:text-white">
-                <MdOutlineMenu/>
+            <div className="text-white space-y-8">
+                <ul className="flex justify-end">
+                    <li className="flex items-center px-2 border-r border-r-white hover:text-black cursor-pointer">
+                        <BiSolidPhoneCall/>+49 (0) 5363 - 810 3 750
+                    </li>
+                    <li className="flex items-center px-2 border-r border-r-white hover:text-black cursor-pointer">
+                        <FaCircleQuestion/>FAQ
+                    </li>
+                    <li className="px-2 border-r border-r-white hover:text-black cursor-pointer">PORTAL 360</li>
+                    <li className="px-2 border-r border-r-white hover:text-black cursor-pointer">REGULATIONS</li>
+                    <li className="px-2 border-r border-r-white hover:text-black cursor-pointer">CAREERS</li>
+                    <li className="px-2">
+                        <input type="search" placeholder="Search" className="text-sm font-normal pl-2 text-black max-w-44 w-full bg-white rounded-md focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500"/>
+                    </li>
+                </ul>
+                <ul className="flex text-white justify-center">
+                    {menu.map((item) => (
+                        <li key={item} className={`text-lg font-semibold flex items-center cursor-pointer mx-4 hover:border-b-2 ${active === item ? "border-b-2 border-white" : ""}`}onClick={() => setActive(item)}>
+                            {item}
+                        </li>
+                    ))}
+                    <li className="p-2 bg-yellow-500 text-lg font-semibold cursor-pointer rounded-b-2xl rounded-tl-2xl hover:bg-yellow-700">
+                        ONE CLICK PICKUP
+                    </li>
+                </ul>
             </div>
         </header>
     )
