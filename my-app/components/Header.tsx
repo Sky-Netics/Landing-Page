@@ -2,11 +2,13 @@
 
 import React from "react"
 import Image from "next/image"
+import { IoMdMenu } from "react-icons/io"
 import { BiSolidPhoneCall } from "react-icons/bi"
 import { FaCircleQuestion } from "react-icons/fa6"
 
 export const Header: React.FC= () =>{
-    const [active, setActive] = React.useState('HOME');
+    const [scroll, setScroll] = React.useState<boolean>(false);
+    const [active, setActive] = React.useState<string>("HOME");
 
     const menu= [
         "HOME",
@@ -16,36 +18,63 @@ export const Header: React.FC= () =>{
         "RECYCLE SOLUTION",
         "CONTACT US"
     ]
+
+    React.useEffect(() =>{
+        const scrollHandler= () =>{
+          const isScrolled= window.scrollY> 100
+          if (isScrolled !== scroll) setScroll(isScrolled)
+        }
+
+        window.addEventListener("scroll", scrollHandler)
+        return () =>{
+          window.removeEventListener("scroll", scrollHandler)
+        }
+      }, [scroll])
     
     return(
-        <header className="h-32 flex items-center justify-between absolute top-0 w-full z-10 px-10">
-            <Image src="/logo.png" width={170} height={51} alt="Logo"/>
-            <div className="text-white space-y-8">
-                <ul className="flex justify-end">
-                    <li className="flex items-center px-2 border-r border-r-white hover:text-black cursor-pointer">
-                        <BiSolidPhoneCall/>+49 (0) 5363 - 810 3 750
+        <header className={`h-32 flex items-center justify-between w-full z-50 px-5 transition-all duration-300 ${
+            scroll ? "fixed bg-white shadow-md text-gray-400" : "absolute text-white"
+          }`}>
+            {scroll ? 
+                <Image src="/logo2.png" width={300} height={60} alt="Logo" className="w-1/2 sm:w-[300px]"/>
+                : 
+                <Image src="/logo.png" width={300} height={60} alt="Logo" className="w-1/2 sm:w-[300px]"/>
+            }
+            <div className="space-y-5 hidden lg:block">
+                <ul className="flex justify-end text-sm font-medium">
+                    <li className="flex items-center px-2 xl:px-4 border-r border-r-white text-nowrap hover:text-black cursor-pointer">
+                        <BiSolidPhoneCall className="text-xl"/>+49 (0) 5363 - 810 3 750
                     </li>
-                    <li className="flex items-center px-2 border-r border-r-white hover:text-black cursor-pointer">
+                    <li className="flex items-center gap-x-1 px-2 xl:px-4 border-r border-r-white hover:text-black cursor-pointer">
                         <FaCircleQuestion/>FAQ
                     </li>
-                    <li className="px-2 border-r border-r-white hover:text-black cursor-pointer">PORTAL 360</li>
-                    <li className="px-2 border-r border-r-white hover:text-black cursor-pointer">REGULATIONS</li>
-                    <li className="px-2 border-r border-r-white hover:text-black cursor-pointer">CAREERS</li>
+                    <li className="px-2 xl:px-4 border-r border-r-white text-nowrap hover:text-black cursor-pointer">PORTAL 360</li>
+                    <li className="px-2 xl:px-4 border-r border-r-white hover:text-black cursor-pointer">REGULATIONS</li>
+                    <li className="px-2 xl:px-4 border-r border-r-white hover:text-black cursor-pointer">CAREERS</li>
                     <li className="px-2">
-                        <input type="search" placeholder="Search" className="text-sm font-normal pl-2 text-black max-w-44 w-full bg-white rounded-md focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500"/>
+                        <input type="search" placeholder="Search"
+                            className="text-sm font-normal pl-2 text-black max-w-44 w-full bg-white rounded-md focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500"
+                        />
                     </li>
                 </ul>
-                <ul className="flex text-white justify-center">
-                    {menu.map((item) => (
-                        <li key={item} className={`text-lg font-semibold flex items-center cursor-pointer mx-4 hover:border-b-2 ${active === item ? "border-b-2 border-white" : ""}`}onClick={() => setActive(item)}>
+                <ul className="flex justify-center">
+                    {menu.map((item) =>(
+                        <li key={item} onClick={() => setActive(item)}
+                            className={`xl:text-lg text-nowrap font-semibold flex items-center cursor-pointer lg:mx-2 xl:mx-4 hover:border-b-2
+                                ${active=== item ? "border-b-2 border-white" : ""}`
+                            }
+                        >
                             {item}
                         </li>
                     ))}
-                    <li className="p-2 bg-yellow-500 text-lg font-semibold cursor-pointer rounded-b-2xl rounded-tl-2xl hover:bg-yellow-700">
+                    <li className="p-2 bg-yellow-500 text-white xl:text-lg text-nowrap font-semibold cursor-pointer rounded-b-2xl rounded-tl-2xl hover:border-b-2 border-b-gray-300">
                         ONE CLICK PICKUP
                     </li>
                 </ul>
             </div>
+            <button className="py-1 px-3 border cursor-pointer border-gray-400 text-gray-400 rounded-md lg:hidden">
+                <IoMdMenu className="size-8"/>
+            </button>
         </header>
     )
 }

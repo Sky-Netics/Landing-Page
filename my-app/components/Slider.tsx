@@ -7,50 +7,18 @@ import "swiper/css/pagination"
 import { Autoplay } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 
-export default function Home() {
-
+export default function Slider() {
   return (
-    <section>
-      <Swiper
-        modules={[ Autoplay ]}
-        spaceBetween={20}
-        slidesPerView={1}
-        pagination={{ clickable: false }}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        className="mySwiper"
-      >
+    <Swiper modules={[ Autoplay ]} slidesPerView={1} autoplay={{ delay: 3000 }} loop={true}>
       <SwiperSlide>
-        <div className="rounded-lg overflow-hidden">
-          <Image
-            src="/recycle.jpg"
-            width={1600}
-            height={400}
-            alt="Nature"
-            className="brightness-50"
-          />
-        </div>
+        <Image src="/recycle.jpg" width={1600} height={850} alt="Nature" className="brightness-50"/>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="rounded-lg overflow-hidden">
-          <Image
-            src="/oil.jpg"
-            width={1600}
-            height={400}
-            alt="Oil"
-          />
-        </div>
+        <Image src="/perfume.jpg" width={1600} height={850} alt="Perfume"/>
       </SwiperSlide>
-        <SwiperSlide>
-          <div className="rounded-lg overflow-hidden">
-            <Image
-              src="/ship.jpg"
-                  width={1600}
-                  height={400}
-                  alt="Slide 3"
-              />
-          </div>
-        </SwiperSlide>
-      </Swiper>
-    </section>
+      <SwiperSlide>
+        <Image src="/ship.jpg" width={1600} height={850} alt="Ship" className="brightness-50"/>
+      </SwiperSlide>
+    </Swiper>
   )
 }
