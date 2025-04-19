@@ -32,16 +32,16 @@ export const Header: React.FC= () =>{
       }, [scroll])
     
     return(
-        <header className={`h-32 flex items-center justify-between w-full z-50 px-5 transition-all duration-300 ${
-            scroll ? "fixed bg-white shadow-md text-gray-400" : "absolute text-white"
+        <header className={`flex items-center justify-between w-full z-50 px-20 transition-all duration-300 ${
+            scroll ? "fixed bg-white shadow-md text-green-700 h-20" : "absolute text-white h-32"
           }`}>
             {scroll ? 
-                <Image src="/logo2.png" width={300} height={60} alt="Logo" className="w-1/2 sm:w-[300px]"/>
+                <Image src="/logo2.png" width={300} height={60} alt="Logo" className="w-1/2 sm:w-[250px]"/>
                 : 
                 <Image src="/logo.png" width={300} height={60} alt="Logo" className="w-1/2 sm:w-[300px]"/>
             }
             <div className="space-y-5 hidden lg:block">
-                <ul className="flex justify-end text-sm font-medium">
+                <ul className={`justify-end text-sm font-medium ${scroll ? "hidden" : " flex"}`}>
                     <li className="flex items-center px-2 xl:px-4 border-r border-r-white text-nowrap hover:text-black cursor-pointer">
                         <BiSolidPhoneCall className="text-xl"/>+49 (0) 5363 - 810 3 750
                     </li>
