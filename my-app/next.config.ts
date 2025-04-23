@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   webpack: (
     config,
-    { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
+    { webpack }
   ) => {
 
     config.plugins.push(
@@ -12,11 +12,9 @@ const nextConfig: NextConfig = {
         jQuery: "jquery",
         "window.jQuery": "jquery",
       })
-    );
-
-    // Important: return the modified config
+    )
     return config
   }
-};
+}
 
 export default nextConfig;
