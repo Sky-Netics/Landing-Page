@@ -2,7 +2,6 @@ import Slider from "@/components/Slider"
 import Points from "@/components/Points"
 import Learning from "@/components/Learning"
 import Question from "@/components/Question"
-import { Footer } from "@/components/Footer"
 import Monitoring from "@/components/Monitoring"
 import Testimonials from "@/components/Testimonials"
 import AdvertisementSection from "@/components/AdvertisementSection"
@@ -17,7 +16,6 @@ export default function Home() {
     <Points/>
     <Learning/>
     <Question/>
-    <Footer/>
   </>
   )
 }

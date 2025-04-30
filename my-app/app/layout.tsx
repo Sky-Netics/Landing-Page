@@ -1,8 +1,11 @@
 import "./globals.css"
 import type { Metadata } from "next"
 import { Archivo } from "next/font/google"
-import { Header } from "@/components/Header"
-import { NextFont } from "next/dist/compiled/@next/font";
+import { NextFont } from "next/dist/compiled/@next/font"
+import { RefreshProvider } from "@/providers/refreshToken"
+import { ConditionalHeader } from "@/providers/conditionalHeader"
+import { ConditionalFooter } from "@/providers/conditionalFooter"
+import { QueryClintProvider } from "@/providers/queryclient.provider"
 
 const archivo: NextFont= Archivo();
 export const metadata: Metadata= {
@@ -20,10 +23,15 @@ export default function RootLayout({
       <body
         className={`antialiased bg-gray-100 ${archivo.className}`}
       >
-        <Header/>
-        <div className="max-w-[1600px] mx-auto">
-          {children}
-        </div>
+        <QueryClintProvider>
+          <RefreshProvider>
+            <ConditionalHeader/>
+            <div className="max-w-[1600px] mx-auto">
+              {children}
+            </div>
+            <ConditionalFooter/>
+          </RefreshProvider>
+        </QueryClintProvider>
       </body>
     </html>
   )

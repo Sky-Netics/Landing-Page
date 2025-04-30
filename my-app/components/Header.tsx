@@ -3,18 +3,20 @@
 import React from "react"
 import Image from "next/image"
 import { IoMdMenu } from "react-icons/io"
+import { useRouter } from "next/navigation"
 import { BiSolidPhoneCall } from "react-icons/bi"
 import { FaCircleQuestion } from "react-icons/fa6"
 
 export const Header: React.FC= () =>{
     const [scroll, setScroll] = React.useState<boolean>(false);
     const [active, setActive] = React.useState<string>("HOME");
+    const { push }= useRouter();
 
     const menu= [
         "HOME",
         "ABOUT",
         "COLLECTION",
-        "SHOP",
+        "PRODUCTS",
         "RECYCLE SOLUTION",
         "CONTACT US"
     ]
@@ -52,9 +54,7 @@ export const Header: React.FC= () =>{
                     <li className="px-2 xl:px-4 border-r border-r-white hover:text-black cursor-pointer">REGULATIONS</li>
                     <li className="px-2 xl:px-4 border-r border-r-white hover:text-black cursor-pointer">CAREERS</li>
                     <li className="px-2">
-                        <input type="search" placeholder="Search"
-                            className="text-sm font-normal pl-2 text-black max-w-44 w-full bg-white rounded-md focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500"
-                        />
+                    <input type="search" placeholder="Search..." className="pl-2 text-sm font-normal rounded-md text-black bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                     </li>
                 </ul>
                 <ul className="flex justify-center">
@@ -67,8 +67,8 @@ export const Header: React.FC= () =>{
                             {item}
                         </li>
                     ))}
-                    <li className="p-2 bg-yellow-500 text-white xl:text-lg text-nowrap font-semibold cursor-pointer rounded-b-2xl rounded-tl-2xl hover:border-b-2 border-b-gray-300">
-                        ONE CLICK PICKUP
+                    <li onClick={() => push("/login")} className="p-2 bg-yellow-500 text-white xl:text-lg text-nowrap font-semibold cursor-pointer rounded-b-2xl rounded-tl-2xl hover:border-b-2 border-b-gray-300">
+                        LOGIN/SIGNUP
                     </li>
                 </ul>
             </div>
