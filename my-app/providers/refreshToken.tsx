@@ -23,7 +23,7 @@ export const RefreshProvider = ({ children }: { children: React.ReactNode }) => 
       return await refreshToken(refreshTokenValue);
     },
     enabled: shouldRefresh,
-    staleTime: 5,
+    staleTime: 5 * 60 * 1000,
     onSuccess: (data) => {
       Cookies.set('token', data.refresh);
       setShouldRefresh(false);
@@ -36,7 +36,7 @@ export const RefreshProvider = ({ children }: { children: React.ReactNode }) => 
   React.useEffect(() => {
     const interval = setInterval(() => {
       if (Cookies.get('refreshToken')) setShouldRefresh(true);
-    }, 5)
+    }, 5 * 60 * 1000)
 
     return () => clearInterval(interval);
   }, []);
