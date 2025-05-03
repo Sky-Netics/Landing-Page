@@ -28,7 +28,7 @@ export default function ProductsList() {
                 </span>
                 <h4 className="text-gray-400 text-sm">{products.data?.total} products</h4>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {products.isLoading && (
                     Array.from({length: 5}, (_, index) =>(
                         <ProductCardSkeleton key={index}/>
