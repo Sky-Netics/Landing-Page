@@ -6,11 +6,11 @@ import { fetchProductsList } from "@/apis/products.api"
 import { ProductCard, ProductCardSkeleton } from "@/components/ProductCard"
 
 export default function ProductsList() {
-    const [page, setPage] = useState<number>(1);
+    const [page, setPage] = useState<number>(5);
 
     const products= useQuery({
         queryKey: ["products", page],
-        queryFn: () => fetchProductsList(page, 5),
+        queryFn: () => fetchProductsList(1, page),
         refetchOnWindowFocus: false
     })
     
