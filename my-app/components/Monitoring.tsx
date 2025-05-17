@@ -20,7 +20,7 @@ export default function Monitoring() {
       }, [])
       
     return (
-        <section className="px-6 sm:px-9 md:px-12 lg:px-16 xl:px-32">
+        <section className="px-5 lg:px-15 xl:px-25">
             <div ref={ref} className={`bg-blue-950 rounded-3xl flex flex-col md:flex-row justify-between gap-5 p-12 transform transition-all duration-1000 ease-out
                 ${visible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}
             `}>

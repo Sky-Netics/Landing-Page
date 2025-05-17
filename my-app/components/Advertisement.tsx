@@ -28,7 +28,7 @@ export default function Advertisement({title, description, image, index}: Advert
 
   return (
     <div ref={ref}
-      className={`transform transition-all bg-white p-12 rounded-3xl text-start space-y-5 duration-1000 ease-out
+      className={`sm:w-1/2 transform transition-all bg-white p-12 rounded-3xl text-start space-y-5 duration-1000 ease-out
         ${visible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}
       `}
       style={{ transitionDelay: `${index * 150}ms` }}

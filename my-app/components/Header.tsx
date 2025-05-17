@@ -3,23 +3,42 @@
 import React from "react"
 import Image from "next/image"
 import { IoMdMenu } from "react-icons/io"
-import { useRouter } from "next/navigation"
 import { BiSolidPhoneCall } from "react-icons/bi"
 import { FaCircleQuestion } from "react-icons/fa6"
+import { usePathname, useRouter } from "next/navigation"
 
 export const Header: React.FC= () =>{
     const [scroll, setScroll] = React.useState<boolean>(false);
-    const [active, setActive] = React.useState<string>("HOME");
+    const [open, setOpen] = React.useState<boolean>(false);
+    const pathname = usePathname();
     const { push }= useRouter();
 
-    const menu= [
-        "HOME",
-        "ABOUT",
-        "COLLECTION",
-        "PRODUCTS",
-        "RECYCLE SOLUTION",
-        "CONTACT US"
-    ]
+    const menu = [
+    {
+        name: "HOME",
+        href: "/"
+    },
+    {
+        name: "ABOUT",
+        href: "/about"
+    },
+    {
+        name: "COLLECTION",
+        href: "/collection"
+    },
+    {
+        name: "PRODUCTS",
+        href: "/products"
+    },
+    {
+        name: "RECYCLE SOLUTION",
+        href: "/recycle"
+    },
+    {
+        name: "CONTACT US",
+        href: "/contact"
+    }
+]
 
     React.useEffect(() =>{
         const scrollHandler= () =>{
@@ -34,7 +53,7 @@ export const Header: React.FC= () =>{
       }, [scroll])
     
     return(
-        <header className={`flex items-center justify-between w-full z-50 px-20 transition-all duration-300 ${
+        <header className={`flex items-center justify-between w-full z-50 px-5 2xl:px-15 transition-all duration-300 ${
             scroll ? "fixed bg-white shadow-md text-green-700 h-20" : "absolute text-white h-32"
           }`}>
             {scroll ? 
@@ -59,12 +78,12 @@ export const Header: React.FC= () =>{
                 </ul>
                 <ul className="flex justify-center">
                     {menu.map((item) =>(
-                        <li key={item} onClick={() => setActive(item)}
+                        <li key={item.name}
                             className={`xl:text-lg text-nowrap font-semibold flex items-center cursor-pointer lg:mx-2 xl:mx-4 hover:border-b-2
-                                ${active=== item ? "border-b-2 border-white" : ""}`
+                                ${pathname=== item.href && scroll ? "border-b-2 border-green-700" : pathname=== item.href && !scroll ? "border-b-2 border-white" : ""}`
                             }
                         >
-                            {item}
+                            <a href={item.href}>{item.name}</a>
                         </li>
                     ))}
                     <li onClick={() => push("/login")} className="p-2 bg-yellow-500 text-white xl:text-lg text-nowrap font-semibold cursor-pointer rounded-b-2xl rounded-tl-2xl hover:border-b-2 border-b-gray-300">
@@ -72,9 +91,20 @@ export const Header: React.FC= () =>{
                     </li>
                 </ul>
             </div>
-            <button className="py-1 px-3 border cursor-pointer border-gray-400 text-gray-400 rounded-md lg:hidden">
+            <button onClick={() => setOpen(!open)} className="py-1 px-3 border cursor-pointer border-gray-400 text-gray-400 rounded-md lg:hidden">
                 <IoMdMenu className="size-8"/>
             </button>
+            {open && (
+                <div className="absolute top-0 right-0 h-screen text-green-700 bg-gray-100 shadow-lg z-20 lg:hidden">
+                    <ul className="flex flex-col">
+                        {menu.map((item) => (
+                            <li key={item.name} className="p-4 hover:bg-gray-200 cursor-pointer" onClick={() => { push(item.href); setOpen(false); }}>
+                                {item.name}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </header>
     )
 }

@@ -23,7 +23,7 @@ export default function Learning() {
   ]
 
   return (
-    <section className="space-y-10 my-16 px-6 sm:px-9 md:px-12 lg:px-16 xl:px-32 flex flex-col justify-center items-center">
+    <section className="space-y-10 my-16 px-5 lg:px-15 xl:px-25 flex flex-col justify-center items-center">
       <h2 className="text-4xl font-medium">Learning Hub</h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {articles.map((article) =>(

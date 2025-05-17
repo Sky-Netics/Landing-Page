@@ -21,14 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased bg-slate-50/30 scroll-smooth ${archivo.className}`}
+        className={`antialiased scroll-smooth bg-slate-100 ${archivo.className}`}
       >
         <QueryClintProvider>
           <RefreshProvider>
             <ConditionalHeader/>
-            <div className="max-w-[1440px] mx-auto">
               {children}
-            </div>
             <ConditionalFooter/>
           </RefreshProvider>
         </QueryClintProvider>
