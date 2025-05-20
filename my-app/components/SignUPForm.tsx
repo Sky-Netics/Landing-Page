@@ -22,7 +22,7 @@ export default function SignUpForm() {
         if (!sign.data || !sign.isSuccess) return;
         console.log("ok");
         reset();
-    }, [sign.data, sign.isSuccess])
+    }, [sign.data, sign.isSuccess, reset])
     React.useEffect(() =>{
         if (!sign.error || !sign.isError) return;
             console.error("nok")

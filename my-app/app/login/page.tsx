@@ -1,24 +1,18 @@
-"use client"
-
-import { useRouter } from "next/navigation"
+import Button from "@/components/Button"
 import LoginForm from "@/components/LoginForm"
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa"
 import { IoLogoGoogle, IoLogoGithub } from "react-icons/io"
 
-export default function Login() {
-    const { push }= useRouter();
-    
+export default function Login() {    
     return (
         <section className="bg-gradient-to-tr from-blue-800 via-blue-600 to-blue-400 h-screen place-content-center place-items-center">
-            <div className="max-w-[900px] h-[500px] bg-white mx-auto rounded-3xl flex shadow-2xl">
+            <div className="max-w-[900px] h-[500px] bg-slate-100 mx-auto rounded-3xl flex shadow-2xl">
                 <div
                     className="bg-blue-500 h-full w-1/2 rounded-l-3xl rounded-r-[125px] text-white place-content-center place-items-center space-y-2.5"
                 >
                     <h1 className="font-extrabold text-4xl">Hello, Welcome!</h1>
                     <h3 className="text-lg">{`Don't have an account?`}</h3>
-                    <button onClick={() => push("/signup")} className="hover:bg-white text-white font-semibold hover:text-blue-500 py-1 px-10 border cursor-pointer rounded">
-                        Register
-                    </button>
+                    <Button title="Register" href="signup"/>
                 </div>
                 <div className="h-full w-1/2 place-content-center place-items-center space-y-2">
                     <h2 className="font-black text-3xl text-slate-600">Login</h2>

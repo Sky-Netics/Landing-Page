@@ -1,49 +1,39 @@
-import Image from "next/image";
-import { GiBrain } from "react-icons/gi";
-import { VscLaw } from "react-icons/vsc";
-import { TfiCrown } from "react-icons/tfi";
-import { TfiMedall } from "react-icons/tfi";
-import { LuListTodo } from "react-icons/lu";
-import { BiDonateHeart } from "react-icons/bi";
-import { FaChevronRight } from "react-icons/fa";
+import Link from "next/link"
+import Image from "next/image"
+import home from "@/public/home.png"
+import { GiBrain } from "react-icons/gi"
+import { VscLaw } from "react-icons/vsc"
+import { TfiCrown } from "react-icons/tfi"
+import { TfiMedall } from "react-icons/tfi"
+import { LuListTodo } from "react-icons/lu"
+import { BiDonateHeart } from "react-icons/bi"
+import { FaChevronRight } from "react-icons/fa"
+import { IoSnowOutline } from "react-icons/io5"
 import { RiArrowDropRightLine } from "react-icons/ri"
-import { IoSnowOutline } from "react-icons/io5";
-import home from "@/public/home.png";
-import Link from "next/link";
 
 export default function AboutUs() {
   return (
     <>
-      <div className=""></div>
-      <div className=" ">
-        <section className="relative mb-50  md:w-full ">
-          <div className=" inset-0 h-[100vh] z-10 opacity-80  overflow-hidden">
-            <Image
-              src={home}
-              alt="Snowflake Logo"
-              width={1440}
-              height={350}
-              className="w-full object-cover object-[down] border-b border-blue shadow-xl  brightness-50 hover:brightness-65 transform-all duration-400 "
-            />
-          </div>
-          <div className="absolute top-[100vh] mt-[-150px] w-full  ">
-            <Image
-              src="https://www.actindo.com/hubfs/Divider-wave-speed-light.svg"
-              alt="Divider wave"
-              width={1440} // Set appropriate width
-              height={100} // Set appropriate height
-              className="w-full h-auto"
-              loading="lazy"
-            />
-          </div>
-          <div className="text-white text-bold text-center space-y-5 wrap max-w-[800px] mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-            <h1 className="text-4xl font-bold mx-auto">ABOUT US</h1>
-          </div>
-        </section>
-        <section className="space-y-10"></section>
-      </div>
-
-      <section className="flex  my-20 grid grid-cols-3 gap-x-10 px-10">
+      <section className="relative mb-50">
+        <Image
+          src={home}
+          alt="Snowflake Logo"
+          width={1440}
+          height={350}
+          className="w-full max-h-screen opacity-80 brightness-50 hover:brightness-65 transform-all duration-400"
+        />
+        <Image
+          src="https://www.actindo.com/hubfs/Divider-wave-speed-light.svg"
+          alt="Divider wave"
+          width={1440}
+          height={100}
+          className="w-full absolute bottom-0"
+        />
+        <div className="text-white text-bold text-center space-y-5 wrap max-w-[800px] mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+          <h1 className="text-4xl font-bold mx-auto">ABOUT US</h1>
+        </div>
+      </section>
+      <section className="my-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
         <div className="text-center text-[#249EDC] place-items-center space-y-2.5">
           <h6 className="text-4xl font-black">9,437</h6>
           <h6 className="font-extrabold text-xl">Global customers</h6>
@@ -142,8 +132,6 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-
-      {/* Values Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-3xl mx-auto text-center space-y-4 px-4">
           <h2 className="text-4xl font-bold">OUR VALUES</h2>
@@ -195,68 +183,65 @@ export default function AboutUs() {
           />
         </div>
       </section>
-
-      <div className="px-5 lg:px-15 xl:px-25 my-10">
-      <div className="flex flex-col sm:flex-row">
-        <div className="w-full sm:w-1/4 mb-6 md:mb-0 relative">
-          <div className="absolute size-7 top-[-15px] left-[-15px] border-t-6 border-l-6 border-gray-200"></div>
-          <h2 className="text-4xl font-bold tracking-wider">
-            Our
-            <br />
-            Services
-          </h2>
+      <section className="px-5 lg:px-15 xl:px-25 my-10">
+        <div className="flex flex-col sm:flex-row">
+          <div className="w-full sm:w-1/4 mb-6 md:mb-0 relative before:absolute before:top-[-15px] before:left-[-15px] before:border-t-20 before:border-l-6 before:border-gray-200 after:absolute after:top-[-15px] after:left-[-15px] after:border-t-6 after:border-l-20 after:border-gray-200">
+            <h2 className="text-4xl font-bold tracking-wider">
+              Our
+              <br />
+              Services
+            </h2>
+          </div>
+          <div className="w-full sm:w-3/4 space-y-10">
+            <div>
+              <div className="flex justify-between items-center text-orange-400 mb-5">
+                <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">Waste Management</h3>
+                <RiArrowDropRightLine className="text-5xl border-b-3"/>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-500 text-xl">
+                <div className="flex items-center">
+                  <RiArrowDropRightLine className="text-2xl"/>
+                  <span>UCO Collecting</span>
+                </div>
+                <div className="flex items-center">
+                  <RiArrowDropRightLine className="text-2xl"/>
+                  <span>Collect Request</span>
+                </div>
+                <div className="flex items-center">
+                  <RiArrowDropRightLine className="text-2xl"/>
+                  <span>Fresh Pickups</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="flex justify-between items-center text-green-700 mb-5">
+                <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">International Waste Trade</h3>
+                <RiArrowDropRightLine className="text-5xl border-b-3"/>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-500 text-xl">
+                <div className="flex items-center">
+                  <RiArrowDropRightLine className="text-2xl"/>
+                  <span>UCO Collecting</span>
+                </div>
+                <div className="flex items-center">
+                  <RiArrowDropRightLine className="text-2xl"/>
+                  <span>Collect Request</span>
+                </div>
+                <div className="flex items-center">
+                  <RiArrowDropRightLine className="text-2xl"/>
+                  <span>Fresh Pickups</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="flex justify-between items-center mb-5">
+                <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">Oit & Fat Processing</h3>
+                <RiArrowDropRightLine className="text-5xl border-b-3"/>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="w-full sm:w-3/4 space-y-10">
-          <div>
-            <div className="flex justify-between items-center text-orange-400 mb-5">
-              <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full pb-2">Waste Management</h3>
-              <RiArrowDropRightLine className="text-5xl border-b-3"/>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-500 text-xl">
-              <div className="flex items-center">
-                <RiArrowDropRightLine className="text-2xl"/>
-                <span>UCO Collecting</span>
-              </div>
-              <div className="flex items-center">
-                <RiArrowDropRightLine className="text-2xl"/>
-                <span>Collect Request</span>
-              </div>
-              <div className="flex items-center">
-                <RiArrowDropRightLine className="text-2xl"/>
-                <span>Fresh Pickups</span>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="flex justify-between items-center text-green-700 mb-5">
-              <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full pb-2">International Waste Trade</h3>
-              <RiArrowDropRightLine className="text-5xl border-b-3"/>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-500 text-xl">
-              <div className="flex items-center">
-                <RiArrowDropRightLine className="text-2xl"/>
-                <span>UCO Collecting</span>
-              </div>
-              <div className="flex items-center">
-                <RiArrowDropRightLine className="text-2xl"/>
-                <span>Collect Request</span>
-              </div>
-              <div className="flex items-center">
-                <RiArrowDropRightLine className="text-2xl"/>
-                <span>Fresh Pickups</span>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="flex justify-between items-center mb-5">
-              <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full pb-2">Oit & Fat Processing</h3>
-              <RiArrowDropRightLine className="text-5xl border-b-3"/>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </div>
+      </section>
     <section className="px-12 sm:px-25 mb-20">
       <div className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 w-full p-10 pl-32 space-y-5 relative">
         <Image src="/perfume.png" alt="Perfume" width={150} height={150} className="absolute left-[-40px] top-[-40px]"/>
@@ -491,7 +476,6 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
@@ -608,5 +592,5 @@ export default function AboutUs() {
         </div>
       </section>
     </>
-  );
+  )
 }

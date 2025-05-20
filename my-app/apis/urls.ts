@@ -1,8 +1,7 @@
 export const urls= {
   account: {
     login: "accounts/api/token/",
-    signup: "accounts/register/",
-    refresh: "accounts/api/token/refresh/"
+    signup: "accounts/register/"
   },
   products: {
     list: (page: number, perPage: number) => `products?skip=${page}&limit=${perPage}`

@@ -1,7 +1,7 @@
 "use client"
 
-import Comment from "@/components/Comment"
 import { motion } from 'framer-motion'
+import Comment from "@/components/Comment"
 
 export default function Testimonials() {
   const comments= [

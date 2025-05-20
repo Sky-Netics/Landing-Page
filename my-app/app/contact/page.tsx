@@ -1,25 +1,12 @@
-"use client"
-
 import Image from "next/image"
 import "leaflet/dist/leaflet.css"
-import dynamic from "next/dynamic"
+import Map from "@/components/Map"
 import { Input } from "@/components/Input"
 import { FaPhoneAlt } from "react-icons/fa"
 import { TextArea } from "@/components/Textarea"
 import { MdEmail, MdLocationPin  } from "react-icons/md"
 
-const MapContainer= dynamic(
-  () => import("react-leaflet").then((mod) => mod.MapContainer),
-  { ssr: false }
-)
-const TileLayer= dynamic(
-  () => import("react-leaflet").then((mod) => mod.TileLayer),
-  { ssr: false }
-)
-
 export default function AboutUs() {
-  const position= [48.2082, 16.3738]
-
   return (
     <main className="space-y-10 pb-10">
       <section className="place-items-center content-end text-center h-[350px] relative">
@@ -61,9 +48,7 @@ export default function AboutUs() {
             <h6 className="text-sm font-bold">Activity address: Haghtanak district, 6/17, Yerevan, Armenia, 0081</h6>
           </span>
           <div className="h-[300px]">
-            <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ height: "100%", width: "100%" }}>
-              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
-            </MapContainer>
+            <Map/>
           </div>
         </div>
         <div className="space-y-5">
