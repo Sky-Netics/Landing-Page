@@ -5,6 +5,7 @@ import { NextFont } from "next/dist/compiled/@next/font"
 import { ConditionalHeader } from "@/providers/conditionalHeader"
 import { ConditionalFooter } from "@/providers/conditionalFooter"
 import { QueryClintProvider } from "@/providers/queryclient.provider"
+import Hero from "@/components/Hero"
 
 const archivo: NextFont= Archivo();
 export const metadata: Metadata= {
@@ -25,6 +26,7 @@ export default function RootLayout({
         <QueryClintProvider>
           <ConditionalHeader/>
             {children}
+            <Hero/>
           <ConditionalFooter/>
         </QueryClintProvider>
       </body>
