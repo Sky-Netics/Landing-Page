@@ -3,7 +3,7 @@ import LoginForm from "@/components/LoginForm"
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa"
 import { IoLogoGoogle, IoLogoGithub } from "react-icons/io"
 
-export default function Login() {    
+export default function Login() {
     return (
         <section className="bg-gradient-to-tr from-blue-800 via-blue-600 to-blue-400 h-screen place-content-center place-items-center">
             <div className="max-w-[900px] h-[500px] bg-slate-100 mx-auto rounded-3xl flex shadow-2xl">

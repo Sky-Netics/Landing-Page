@@ -14,13 +14,13 @@ import { RiArrowDropRightLine } from "react-icons/ri"
 export default function AboutUs() {
   return (
     <>
-      <section className="relative mb-50">
+      <section className="relative">
         <Image
           src={home}
           alt="Snowflake Logo"
           width={1440}
           height={350}
-          className="w-full max-h-screen opacity-80 brightness-50 hover:brightness-65 transform-all duration-400"
+          className="w-full max-h-screen object-cover object-[30%_70%] opacity-80 brightness-50 hover:brightness-65 transform-all duration-400"
         />
         <Image
           src="https://www.actindo.com/hubfs/Divider-wave-speed-light.svg"
@@ -29,18 +29,14 @@ export default function AboutUs() {
           height={100}
           className="w-full absolute bottom-0"
         />
-        <div className="text-white text-bold text-center space-y-5 wrap max-w-[800px] mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-          <h1 className="text-4xl font-bold mx-auto">ABOUT US</h1>
-        </div>
+        <h1 className="text-4xl text-white font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">ABOUT US</h1>
       </section>
-      <section className="my-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
+      <section className="my-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-10 px-5">
         <div className="text-center text-[#249EDC] place-items-center space-y-2.5">
           <h6 className="text-4xl font-black">9,437</h6>
-          <h6 className="font-extrabold text-xl">Global customers</h6>
+          <h4 className="font-extrabold text-xl">Global customers</h4>
           <p className="text-black">
-            Thousands of organizations around the world rely on Snowflake to
-            unite siloed data, discover and securely share data and execute
-            diverse workloads.
+            Thousands of organizations around the world rely on Snowflake to unite siloed data, discover and securely share data and execute diverse workloads.
           </p>
           <button className="flex items-center gap-x-1.5 font-semibold cursor-pointer hover:text-blue-600">
             Customer Stories <FaChevronRight className="text-[0.750rem]" />
@@ -48,11 +44,9 @@ export default function AboutUs() {
         </div>
         <div className="text-center text-[#249EDC] place-items-center space-y-2.5">
           <h6 className="text-4xl font-black">4.2B</h6>
-          <h6 className="font-extrabold text-xl">Daily Queries</h6>
+          <h4 className="font-extrabold text-xl">Daily Queries</h4>
           <p className="text-black">
-            Together, Snowflake customers have more than 4.2 B of data queries
-            on the Data Cloud, with more than 515 million data workloads that
-            run each day.
+            Together, Snowflake customers have more than 4.2 B of data queries on the Data Cloud, with more than 515 million data workloads that run each day.
           </p>
           <button className="flex items-center gap-x-1.5 font-semibold cursor-pointer hover:text-blue-600">
             Snowflake Platform <FaChevronRight className="text-[0.750rem]" />
@@ -60,11 +54,9 @@ export default function AboutUs() {
         </div>
         <div className="text-center text-[#249EDC] place-items-center space-y-2.5">
           <h6 className="text-4xl font-black">2,416</h6>
-          <h6 className="font-extrabold text-xl">Marketplace Listings</h6>
+          <h4 className="font-extrabold text-xl">Marketplace Listings</h4>
           <p className="text-black">
-            Find, try and buy ready-to-use data and applications from the
-            Snowflake Marketplace to enhance your data and power innovative
-            business solutions.
+            Find, try and buy ready-to-use data and applications from the Snowflake Marketplace to enhance your data and power innovative business solutions.
           </p>
           <button className="flex items-center gap-x-1.5 font-semibold cursor-pointer hover:text-blue-600">
             Snowflake Marketplace <FaChevronRight className="text-[0.750rem]" />
@@ -132,7 +124,7 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-gray-50">
+      <section className="py-20">
         <div className="max-w-3xl mx-auto text-center space-y-4 px-4">
           <h2 className="text-4xl font-bold">OUR VALUES</h2>
           <p className="text-lg text-gray-600">
@@ -182,6 +174,10 @@ export default function AboutUs() {
             className="rounded-xl shadow-2xl w-full h-auto object-cover brightness-60 hover:brightness-80 transition-transform transform hover:scale-103"
           />
         </div>
+      </section>
+      <section className="px-5 lg:px-15 xl:px-25 relative">
+        <Image width={1440} height={300} src="/armenia1.webp" alt="" className="h-64 object-cover object-[50%_80%] brightness-65"/>
+        <h6 className="text-white text-3xl absolute top-1/4 left-1/4">A WORLD-CLASS BUSINESS AND INDUSTRIAL HUB</h6>
       </section>
       <section className="px-5 lg:px-15 xl:px-25 my-10">
         <div className="flex flex-col sm:flex-row">
@@ -243,11 +239,11 @@ export default function AboutUs() {
         </div>
       </section>
     <section className="px-12 sm:px-25 mb-20">
-      <div className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 w-full p-10 pl-32 space-y-5 relative">
-        <Image src="/perfume.png" alt="Perfume" width={150} height={150} className="absolute left-[-40px] top-[-40px]"/>
+      <div className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 w-full p-10 sm:pl-32 space-y-5 relative">
+        <Image src="/Untitled2.png" alt="Perfume" width={250} height={250} className="absolute -left-25 -top-5 hidden sm:block"/>
         <h4 className="text-3xl font-semibold">Need to trade your International Waste?</h4>
         <p className="text-gray-500">We are here for you to offer Lorem ipsum dolor sit amet, con sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-        <button className="text-green-700 border-b-2 cursor-pointer hover:text-green-800">Read More Here</button>
+        <button className="border-b-2 cursor-pointer text-green-600 hover:text-green-800">Read More Here</button>
       </div>
     </section>
       <section className="md:space-x-4 space-y-4">

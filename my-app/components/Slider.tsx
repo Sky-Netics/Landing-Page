@@ -17,7 +17,7 @@ export default function Slider() {
         <Image src="/supermarket.png" width={1600} height={850} alt="Supermarket" className="rounded-b-2xl"/>
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/vegetable.jpg" width={1600} height={850} alt="Vegetable" className="rounded-b-2xl"/>
+        <Image src="/vegetable.jpg" width={1600} height={850} alt="Vegetable" className="rounded-b-2xl max-h-screen"/>
       </SwiperSlide>
     </Swiper>
   )

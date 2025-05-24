@@ -2,6 +2,7 @@
 
 import React from "react"
 import Image from "next/image"
+import { IoClose } from "react-icons/io5"
 import { IoMdMenu } from "react-icons/io"
 import { BiSolidPhoneCall } from "react-icons/bi"
 import { FaCircleQuestion } from "react-icons/fa6"
@@ -13,32 +14,38 @@ export const Header: React.FC= () =>{
     const pathname = usePathname();
     const { push }= useRouter();
 
-    const menu = [
-    {
-        name: "HOME",
-        href: "/"
-    },
-    {
-        name: "ABOUT",
-        href: "/about"
-    },
-    {
-        name: "COLLECTION",
-        href: "/collection"
-    },
-    {
-        name: "PRODUCTS",
-        href: "/products"
-    },
-    {
-        name: "RECYCLE SOLUTION",
-        href: "/recycle"
-    },
-    {
-        name: "CONTACT US",
-        href: "/contact"
+    const menu= [
+        {
+            name: "HOME",
+            href: "/"
+        },
+        {
+            name: "ABOUT",
+            href: "/about"
+        },
+        {
+            name: "COLLECTION",
+            href: "/collection"
+        },
+        {
+            name: "PRODUCTS",
+            href: "/products"
+        },
+        {
+            name: "RECYCLE SOLUTION",
+            href: "/recycle"
+        },
+        {
+            name: "CONTACT US",
+            href: "/contact"
+        }
+    ]
+    type menuItem= typeof menu[number]
+
+    const click= (item: menuItem) =>{
+        push(item.href);
+        setOpen(false);
     }
-]
 
     React.useEffect(() =>{
         const scrollHandler= () =>{
@@ -50,12 +57,12 @@ export const Header: React.FC= () =>{
         return () =>{
           window.removeEventListener("scroll", scrollHandler)
         }
-      }, [scroll])
+    }, [scroll])
     
     return(
-        <header className={`flex items-center justify-between w-full z-50 px-5 2xl:px-15 transition-all duration-300 ${
-            scroll ? "fixed bg-white shadow-md text-green-700 h-20" : "absolute text-white h-32"
-          }`}>
+        <header className={`flex items-center justify-between w-full z-50 px-5 2xl:px-15 transition-all duration-300
+            ${scroll ? "fixed bg-white shadow-md text-green-700 h-20" : "absolute text-white h-32"}`
+        }>
             {scroll ? 
                 <Image src="/logo2.png" width={300} height={60} alt="Logo" className="w-1/2 sm:w-[250px]"/>
                 : 
@@ -95,10 +102,13 @@ export const Header: React.FC= () =>{
                 <IoMdMenu className="size-8"/>
             </button>
             {open && (
-                <div className="absolute top-0 right-0 h-screen text-green-700 bg-gray-100 shadow-lg z-20 lg:hidden">
+                <div className="absolute top-0 right-0 h-screen bg-gray-100 shadow-lg z-20 text-green-700 lg:hidden">
+                    <button className="p-4 text-2xl cursor-pointer hover:text-green-900" onClick={() => setOpen(false)}>
+                        <IoClose/>
+                    </button>
                     <ul className="flex flex-col">
                         {menu.map((item) => (
-                            <li key={item.name} className="p-4 hover:bg-gray-200 cursor-pointer" onClick={() => { push(item.href); setOpen(false); }}>
+                            <li key={item.name} className="p-4 hover:bg-gray-200 cursor-pointer" onClick={() => click(item)}>
                                 {item.name}
                             </li>
                         ))}

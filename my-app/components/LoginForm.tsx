@@ -22,7 +22,8 @@ export default function LoginForm() {
     React.useEffect(() =>{
         if (!log.data || !log.isSuccess) return;
         reset();
-        Cookies.set("token", log.data.refresh);
+        Cookies.set("access", log.data.access);
+        Cookies.set("refresh", log.data.refresh);
     }, [log.data, log.isSuccess, reset])
     React.useEffect(() =>{
         if (!log.error || !log.isError) return;
