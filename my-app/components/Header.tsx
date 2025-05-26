@@ -102,7 +102,7 @@ export const Header: React.FC= () =>{
                 <IoMdMenu className="size-8"/>
             </button>
             {open && (
-                <div className="absolute top-0 right-0 h-screen bg-gray-100 shadow-lg z-20 text-green-700 lg:hidden">
+                <nav className="absolute top-0 right-0 h-screen bg-gray-100 shadow-lg z-20 text-green-700 lg:hidden">
                     <button className="p-4 text-2xl cursor-pointer hover:text-green-900" onClick={() => setOpen(false)}>
                         <IoClose/>
                     </button>
@@ -113,7 +113,7 @@ export const Header: React.FC= () =>{
                             </li>
                         ))}
                     </ul>
-                </div>
+                </nav>
             )}
         </header>
     )

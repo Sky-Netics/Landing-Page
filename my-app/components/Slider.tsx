@@ -9,15 +9,39 @@ import { Swiper, SwiperSlide } from "swiper/react"
 
 export default function Slider() {
   return (
-    <Swiper modules={[ Autoplay ]} slidesPerView={1} autoplay={{ delay: 3000 }} loop={true} className="brightness-50 rounded-b-2xl max-h-screen">
+    <Swiper 
+      loop={true}
+      slidesPerView={1}
+      modules={[ Autoplay ]}
+      autoplay={{ delay: 3000 }}
+      className="brightness-50 rounded-b-2xl max-h-screen"
+    >
       <SwiperSlide>
-        <Image src="/armenia.jpg" width={1600} height={850} alt="Armenia" className="rounded-b-2xl"/>
+        <Image
+          width={1600}
+          height={350}
+          alt="Armenia"
+          src="/armenia.jpg" 
+          className="rounded-b-2xl"
+        />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/supermarket.png" width={1600} height={850} alt="Supermarket" className="rounded-b-2xl"/>
+        <Image
+          width={1600}
+          height={350}
+          alt="Supermarket"
+          src="/supermarket.png"
+          className="rounded-b-2xl"
+        />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/vegetable.jpg" width={1600} height={850} alt="Vegetable" className="rounded-b-2xl max-h-screen"/>
+        <Image
+          width={1600}
+          height={350}
+          alt="Vegetable"
+          src="/vegetable.jpg"
+          className="rounded-b-2xl max-h-screen"
+        />
       </SwiperSlide>
     </Swiper>
   )

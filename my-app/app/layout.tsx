@@ -4,8 +4,8 @@ import { Archivo } from "next/font/google"
 import { NextFont } from "next/dist/compiled/@next/font"
 import { ConditionalHeader } from "@/providers/conditionalHeader"
 import { ConditionalFooter } from "@/providers/conditionalFooter"
+import { RefreshProvider } from "@/providers/RefreshToken.provider"
 import { QueryClintProvider } from "@/providers/queryclient.provider"
-import Hero from "@/components/Hero"
 
 const archivo: NextFont= Archivo();
 export const metadata: Metadata= {
@@ -20,14 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased scroll-smooth bg-slate-100 ${archivo.className}`}
-      >
+      <body className={`antialiased scroll-smooth bg-slate-100 ${archivo.className}`}>
         <QueryClintProvider>
-          <ConditionalHeader/>
+          <RefreshProvider>
+            <ConditionalHeader/>
             {children}
-            <Hero/>
-          <ConditionalFooter/>
+            <ConditionalFooter/>
+          </RefreshProvider>
         </QueryClintProvider>
       </body>
     </html>

@@ -5,8 +5,6 @@ import Question from "@/components/Question"
 import Monitoring from "@/components/Monitoring"
 import Testimonials from "@/components/Testimonials"
 import AdvertisementSection from "@/components/AdvertisementSection"
-import Footer from "@/components/Footer"
-import Hero from "@/components/Hero"
 
 export default function Home() {
   return (
@@ -18,7 +16,6 @@ export default function Home() {
       <Points/>
       <Learning/>
       <Question/>
-      
     </>
   )
 }

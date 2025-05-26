@@ -19,8 +19,8 @@ export const signUp= async (body: ISignUp) =>{
   const response= await client.post(urls.account.signup, body);
   return response.data;
 }
-export const refresh= async (body: string) =>{
+export const refreshToken= async (body: string) =>{
   const client= generateClient();
-  const response= await client.post(urls.account.refresh, body);
+  const response= await client.post(urls.account.refresh, { refresh: body });
   return response.data;
 }

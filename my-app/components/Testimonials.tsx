@@ -45,7 +45,7 @@ export default function Testimonials() {
             x: {
               repeat: Number.POSITIVE_INFINITY,
               repeatType: "loop",
-              duration: 30,
+              duration: typeof window !== "undefined" && window.innerWidth> 640 ? 30 : 10,
               ease: "linear"
             }
           }}
