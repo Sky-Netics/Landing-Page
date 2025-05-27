@@ -11,17 +11,10 @@ export default function AboutUs() {
     <main className="space-y-10 pb-10">
       <section className="place-items-center content-end text-center h-[350px] relative">
         <Image 
-<<<<<<< Updated upstream
           alt="Ship"
           width={1920}
           height={1080}
           src="/supermarket3.jpg"
-=======
-          src="/armenia.jpg" 
-          width={1920} 
-          height={1080} 
-          alt="Ship" 
->>>>>>> Stashed changes
           className="brightness-50 absolute top-0 h-[350px] object-cover"
         />
         <div className="bg-white text-blue-500 py-1.5 px-3 rounded-lg">WRITE TO US</div>

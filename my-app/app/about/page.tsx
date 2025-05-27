@@ -20,11 +20,7 @@ export default function AboutUs() {
           alt="Snowflake Logo"
           width={1440}
           height={350}
-<<<<<<< Updated upstream
           className="w-full max-h-screen object-cover object-[30%_70%] opacity-80 brightness-50 hover:brightness-65 transform-all duration-400"
-=======
-          className="w-full max-h-screen opacity-80 brightness-60 hover:brightness-65 transform-all duration-400"
->>>>>>> Stashed changes
         />
         <Image
           src="https://www.actindo.com/hubfs/Divider-wave-speed-light.svg"
