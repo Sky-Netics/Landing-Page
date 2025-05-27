@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import home from "@/public/home.png"
+import home from "@/public/supermarket.png"
 import { GiBrain } from "react-icons/gi"
 import { VscLaw } from "react-icons/vsc"
 import { TfiCrown } from "react-icons/tfi"
@@ -20,7 +20,11 @@ export default function AboutUs() {
           alt="Snowflake Logo"
           width={1440}
           height={350}
+<<<<<<< Updated upstream
           className="w-full max-h-screen object-cover object-[30%_70%] opacity-80 brightness-50 hover:brightness-65 transform-all duration-400"
+=======
+          className="w-full max-h-screen opacity-80 brightness-60 hover:brightness-65 transform-all duration-400"
+>>>>>>> Stashed changes
         />
         <Image
           src="https://www.actindo.com/hubfs/Divider-wave-speed-light.svg"

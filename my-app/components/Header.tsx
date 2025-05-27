@@ -60,9 +60,15 @@ export const Header: React.FC= () =>{
     }, [scroll])
     
     return(
+<<<<<<< Updated upstream
         <header className={`flex items-center justify-between w-full z-50 px-5 2xl:px-15 transition-all duration-300
             ${scroll ? "fixed bg-white shadow-md text-green-700 h-20" : "absolute text-white h-32"}`
         }>
+=======
+        <header className={`flex items-center justify-between w-full z-50 px-5 2xl:px-15 transition-all duration-300 ${
+            scroll ? "fixed bg-white shadow-md text-gray-700 h-20" : "absolute text-white h-32"
+          }`}>
+>>>>>>> Stashed changes
             {scroll ? 
                 <Image src="/logo2.png" width={300} height={60} alt="Logo" className="w-1/2 sm:w-[250px]"/>
                 : 
@@ -87,7 +93,7 @@ export const Header: React.FC= () =>{
                     {menu.map((item) =>(
                         <li key={item.name}
                             className={`xl:text-lg text-nowrap font-semibold flex items-center cursor-pointer lg:mx-2 xl:mx-4 hover:border-b-2
-                                ${pathname=== item.href && scroll ? "border-b-2 border-green-700" : pathname=== item.href && !scroll ? "border-b-2 border-white" : ""}`
+                                ${pathname=== item.href && scroll ? "border-b-2 border-gray-700" : pathname=== item.href && !scroll ? "border-b-2 border-white" : ""}`
                             }
                         >
                             <a href={item.href}>{item.name}</a>
@@ -102,10 +108,14 @@ export const Header: React.FC= () =>{
                 <IoMdMenu className="size-8"/>
             </button>
             {open && (
+<<<<<<< Updated upstream
                 <nav className="absolute top-0 right-0 h-screen bg-gray-100 shadow-lg z-20 text-green-700 lg:hidden">
                     <button className="p-4 text-2xl cursor-pointer hover:text-green-900" onClick={() => setOpen(false)}>
                         <IoClose/>
                     </button>
+=======
+                <div className="absolute top-0 right-0 h-screen text-gray-700 bg-gray-100 shadow-lg z-20 lg:hidden">
+>>>>>>> Stashed changes
                     <ul className="flex flex-col">
                         {menu.map((item) => (
                             <li key={item.name} className="p-4 hover:bg-gray-200 cursor-pointer" onClick={() => click(item)}>
