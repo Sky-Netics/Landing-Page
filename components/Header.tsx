@@ -11,6 +11,7 @@ import { usePathname, useRouter } from "next/navigation"
 export const Header: React.FC= () =>{
     const [scroll, setScroll] = React.useState<boolean>(false);
     const [open, setOpen] = React.useState<boolean>(false);
+    const [searchQuery, setSearchQuery] = React.useState<string>("");
     const pathname = usePathname();
     const { push }= useRouter();
 
@@ -47,6 +48,10 @@ export const Header: React.FC= () =>{
         setOpen(false);
     }
 
+    const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchQuery(e.target.value);
+    }
+
     React.useEffect(() =>{
         const scrollHandler= () =>{
           const isScrolled= window.scrollY> 100
@@ -80,7 +85,13 @@ export const Header: React.FC= () =>{
                     <li className="px-2 xl:px-4 border-r border-r-white hover:text-black cursor-pointer">Delivery</li>
                     <li className="px-2 xl:px-4 border-r border-r-white hover:text-black cursor-pointer">Careers</li>
                     <li className="px-2">
-                    <input type="search" placeholder="Search products..." className="pl-2 text-sm font-normal rounded-md text-black bg-white focus:outline-none focus:ring-2 focus:ring-green-500 w-32 sm:w-40"/>
+                        <input 
+                            type="search" 
+                            placeholder="Search products..." 
+                            className="pl-2 text-sm font-normal rounded-md text-black bg-white focus:outline-none focus:ring-2 focus:ring-green-500 w-32 sm:w-40"
+                            value={searchQuery}
+                            onChange={handleSearch}
+                        />
                     </li>
                 </ul>
                 <ul className="flex flex-wrap justify-center gap-2 lg:gap-4">
