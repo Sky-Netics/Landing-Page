@@ -34,7 +34,7 @@ export default function Learning() {
         ))}
       </div>
       <button
-        className="px-7 py-3 border text-[16px] border-green-600 rounded-lg cursor-pointer font-normal hover:text-white hover:bg-green-600"
+        className="px-7 py-3 border text-[16px] border-blue-400 rounded-lg cursor-pointer font-normal hover:text-white hover:bg-blue-400"
       >
         Explore More Tips
       </button>

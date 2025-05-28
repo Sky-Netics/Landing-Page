@@ -20,12 +20,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased scroll-smooth bg-slate-100 ${archivo.className}`}>
+      <body className={`antialiased scroll-smooth bg-slate-100 min-h-screen w-full flex flex-col ${archivo.className}`}>
         <QueryClintProvider>
           <RefreshProvider>
-            <ConditionalHeader/>
-            {children}
-            <ConditionalFooter/>
+            <div className="flex flex-col min-h-screen w-full">
+              <ConditionalHeader/>
+              <main className="flex-grow w-full">
+                {children}
+              </main>
+              <ConditionalFooter/>
+            </div>
           </RefreshProvider>
         </QueryClintProvider>
       </body>

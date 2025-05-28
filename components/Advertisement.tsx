@@ -36,7 +36,7 @@ export default function Advertisement({title, description, image, index}: Advert
       <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-medium leading-tight">{title}</h3>
       <p className="text-sm sm:text-base text-gray-500">{description}</p>
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mt-4 sm:mt-8">
-        <button className="w-full sm:w-auto py-2 sm:py-3 px-4 sm:px-6 bg-green-600 text-white text-sm sm:text-base text-nowrap cursor-pointer rounded-lg font-medium hover:bg-green-700 transition-colors">
+        <button className="w-full sm:w-auto py-2 sm:py-3 px-4 sm:px-6 bg-blue-400 text-white text-sm sm:text-base text-nowrap cursor-pointer rounded-lg font-medium hover:bg-gray-900 transition-colors">
           Learn More
         </button>
         <div className="w-full sm:w-auto flex justify-center sm:flex-shrink-0">

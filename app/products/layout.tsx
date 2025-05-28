@@ -14,7 +14,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-5 p-4 sm:p-5">
                 <aside className="w-full lg:w-1/5 lg:block">
                     <div className="lg:hidden mb-4">
-                        <button className="w-full p-2 bg-green-600 text-white rounded-lg">
+                        <button className="w-full p-2 bg-black text-white rounded-lg">
                             Filter Products
                         </button>
                     </div>

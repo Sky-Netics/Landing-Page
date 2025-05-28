@@ -28,13 +28,13 @@ export default function Article({tag, image, title, description}: ArticleProps) 
       </div>
       <div className="space-y-4">
         <div className="flex gap-x-2 items-center">
-          <span className="text-[12px] font-medium py-1 px-3 bg-green-100 text-green-800 rounded-full">{tag}</span>
+          <span className="text-[12px] font-medium py-1 px-3 bg-blue-100 text-blue-800 rounded-full">{tag}</span>
           <h6 className="text-[11px] text-gray-500">APRIL 19, 2024</h6>
         </div>
-        <h3 className="text-2xl font-semibold text-gray-800 hover:text-green-600 transition-colors">{title}</h3>
+        <h3 className="text-2xl font-semibold text-gray-800 hover:text-blue-400 transition-colors">{title}</h3>
         <p className="text-gray-600 leading-relaxed">{description}</p>
-        <button className={`flex items-center gap-x-2 text-sm font-medium text-green-600 hover:text-green-700 transition-all duration-300 ${hover ? "gap-x-3" : ""}`}>
-          Read More <FaArrowRight className={`text-sm ${hover ? "text-green-700" : ""}`}/>
+        <button className={`flex items-center gap-x-2 text-sm font-medium text-blue-400 hover:text-blue-500 transition-all duration-300 ${hover ? "gap-x-3" : ""}`}>
+          Read More <FaArrowRight className={`text-sm ${hover ? "text-blue-500" : ""}`}/>
         </button>
       </div>
     </div>

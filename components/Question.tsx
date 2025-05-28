@@ -56,7 +56,7 @@ export default function Question() {
 
   return (
     <section className="mb-8 px-5">
-      <div ref={ref} className={`transform transition-all text-start space-y-5 duration-1000 ease-out bg-green-900 rounded-3xl justify-between text-white p-16 gap-5 flex flex-col md:flex-row
+      <div ref={ref} className={`transform transition-all text-start space-y-5 duration-1000 ease-out bg-black rounded-3xl justify-between text-white p-16 gap-5 flex flex-col md:flex-row
         ${visible ? "translate-x-0 opacity-100" : "translate-x-[-4rem] opacity-0"}
       `}>
         <h2 className="text-[28px] md:text-[40px]">Frequently Asked Questions</h2>

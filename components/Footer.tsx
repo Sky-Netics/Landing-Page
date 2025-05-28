@@ -4,7 +4,7 @@ import { FaInstagram, FaApple, FaGooglePlay, FaFacebook, FaTwitter } from "react
 
 const Footer = () => {
   return (
-    <div className="bg-green-900 text-white min-h-screen py-12 px-4 sm:px-8">
+    <footer className="bg-black text-white w-full py-8 sm:py-12 px-4 sm:px-8">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
           FreshMart Supermarket<br/> Your One-Stop Shop for<br/> Quality Groceries
@@ -160,7 +160,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

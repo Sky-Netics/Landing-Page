@@ -31,33 +31,33 @@ export default function AboutUs() {
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">ABOUT US</h1>
       </section>
       <section className="my-8 sm:my-12 md:my-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-3 sm:px-4 lg:px-5">
-        <div className="text-center text-[#2E7D32] place-items-center space-y-2 sm:space-y-2.5">
+        <div className="text-center text-blue-400 place-items-center space-y-2 sm:space-y-2.5">
           <h6 className="text-3xl sm:text-4xl font-black">9,437</h6>
           <h4 className="font-extrabold text-lg sm:text-xl">Global customers</h4>
           <p className="text-black text-sm sm:text-base">
             Thousands of customers around the world trust FreshMart for their daily grocery needs, enjoying quality products and exceptional service.
           </p>
-          <button className="flex items-center gap-x-1.5 font-semibold cursor-pointer hover:text-green-700 text-sm sm:text-base">
+          <button className="flex items-center gap-x-1.5 font-semibold cursor-pointer hover:text-blue-400 text-sm sm:text-base">
             Customer Stories <FaChevronRight className="text-[0.750rem]" />
           </button>
         </div>
-        <div className="text-center text-[#2E7D32] place-items-center space-y-2.5">
+        <div className="text-center text-blue-400 place-items-center space-y-2.5">
           <h6 className="text-4xl font-black">4.2B</h6>
           <h4 className="font-extrabold text-xl">Daily Transactions</h4>
           <p className="text-black">
             Together, FreshMart customers make over 4.2 billion transactions annually, with millions of products sold each day across our stores.
           </p>
-          <button className="flex items-center gap-x-1.5 font-semibold cursor-pointer hover:text-green-700">
+          <button className="flex items-center gap-x-1.5 font-semibold cursor-pointer hover:text-blue-400">
             Shop Now <FaChevronRight className="text-[0.750rem]" />
           </button>
         </div>
-        <div className="text-center text-[#2E7D32] place-items-center space-y-2.5">
+        <div className="text-center text-blue-400 place-items-center space-y-2.5">
           <h6 className="text-4xl font-black">2,416</h6>
           <h4 className="font-extrabold text-xl">Product Categories</h4>
           <p className="text-black">
             Find everything you need from our extensive range of products, from fresh produce to household essentials, all at competitive prices.
           </p>
-          <button className="flex items-center gap-x-1.5 font-semibold cursor-pointer hover:text-green-700">
+          <button className="flex items-center gap-x-1.5 font-semibold cursor-pointer hover:text-blue-400">
             Browse Products <FaChevronRight className="text-[0.750rem]" />
           </button>
         </div>
@@ -65,7 +65,7 @@ export default function AboutUs() {
       <section className="py-6 sm:py-8 md:py-10 mx-3 sm:mx-4 px-3 sm:px-4 space-y-6 sm:space-y-8">
         <div className="max-w-3xl mx-auto text-center space-y-3 sm:space-y-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-            <span className="text-[#2E7D32]">MEET OUR</span> LEADERSHIP
+            <span className="text-blue-400">MEET OUR</span> LEADERSHIP
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-600">
             Every employee matters at FreshMart. Meet the team that ensures quality service and fresh products for our customers.
@@ -79,7 +79,7 @@ export default function AboutUs() {
               <p className="text-sm sm:text-base text-gray-600">
                 Our experienced retail professionals lead FreshMart with a focus on quality, customer service, and innovation in the grocery industry.
               </p>
-              <button className="bg-[#2E7D32] hover:bg-green-700 text-white text-sm sm:text-base font-medium rounded-full px-4 sm:px-6 py-2 sm:py-3 transition">
+              <button className="bg-blue-400 hover:bg-blue-500 text-white text-sm sm:text-base font-medium rounded-full px-4 sm:px-6 py-2 sm:py-3 transition">
                 MEET THE TEAM
               </button>
             </div>
@@ -109,7 +109,7 @@ export default function AboutUs() {
               <p className="text-sm sm:text-base text-gray-600">
                 Thanks to the guidance of our board, FreshMart continues to expand and serve customers with the highest quality products and service.
               </p>
-              <button className="bg-[#2E7D32] hover:bg-green-700 text-white text-sm sm:text-base font-medium rounded-full px-4 sm:px-6 py-2 sm:py-3 transition">
+              <button className="bg-blue-400 hover:bg-blue-500 text-white text-sm sm:text-base font-medium rounded-full px-4 sm:px-6 py-2 sm:py-3 transition">
                 MEET THE TEAM
               </button>
             </div>
@@ -139,7 +139,7 @@ export default function AboutUs() {
               key={index}
               className="bg-white rounded-xl shadow p-4 sm:p-6 text-center space-y-3 sm:space-y-4 hover:shadow-md transition"
             >
-              <div className="bg-[#2E7D32] inline-flex items-center justify-center rounded-full w-12 h-12 sm:w-16 sm:h-16 text-white text-xl sm:text-2xl mx-auto">
+              <div className="bg-blue-400 inline-flex items-center justify-center rounded-full w-12 h-12 sm:w-16 sm:h-16 text-white text-xl sm:text-2xl mx-auto">
                 {item.icon}
               </div>
               <h6 className="font-semibold text-sm sm:text-base">{item.title}</h6>
@@ -153,7 +153,7 @@ export default function AboutUs() {
           <div className="space-y-3 w-full sm:w-1/2">
             <h4 className="text-lg sm:text-xl font-bold">FRESHMART ACROSS THE CITY</h4>
             <p className="text-sm sm:text-base">We&apos;re a growing supermarket chain with multiple locations throughout the city, making it convenient for you to shop for fresh groceries and household essentials.</p>
-            <button className="bg-[#2E7D32] text-white text-xs sm:text-sm font-semibold rounded-full py-2 sm:py-3 px-4 sm:px-5 cursor-pointer hover:bg-green-700">
+            <button className="bg-blue-400 text-white text-xs sm:text-sm font-semibold rounded-full py-2 sm:py-3 px-4 sm:px-5 cursor-pointer hover:bg-blue-500">
               FIND NEAREST STORE
             </button>
           </div>
@@ -187,7 +187,7 @@ export default function AboutUs() {
           </div>
           <div className="w-full sm:w-3/4 space-y-6 sm:space-y-10">
             <div>
-              <div className="flex justify-between items-center text-orange-400 mb-3 sm:mb-5">
+              <div className="flex justify-between items-center text-blue-400 mb-3 sm:mb-5">
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-10 sm:h-12">Home Delivery</h3>
                 <RiArrowDropRightLine className="text-3xl sm:text-5xl border-b-3"/>
               </div>
@@ -207,7 +207,7 @@ export default function AboutUs() {
               </div>
             </div>
             <div>
-              <div className="flex justify-between items-center text-green-700 mb-5">
+              <div className="flex justify-between items-center text-blue-400 mb-5">
                 <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">Special Services</h3>
                 <RiArrowDropRightLine className="text-5xl border-b-3"/>
               </div>
@@ -246,7 +246,7 @@ export default function AboutUs() {
           />
           <h4 className="text-xl sm:text-3xl font-semibold">Need Groceries Delivered?</h4>
           <p className="text-gray-500 text-sm sm:text-base">Experience the convenience of our home delivery service. Fresh groceries delivered right to your doorstep.</p>
-          <button className="border-b-2 cursor-pointer text-green-600 hover:text-green-800 text-sm sm:text-base">Order Now</button>
+          <button className="border-b-2 cursor-pointer text-blue-400 hover:text-blue-500 text-sm sm:text-base">Order Now</button>
         </div>
       </section>
       <section className="py-6 sm:py-8 md:py-10 bg-gray-50">
@@ -262,7 +262,7 @@ export default function AboutUs() {
               <div>
                 <Link
                   href="/about"
-                  className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-slate-600 text-white text-sm sm:text-base font-medium rounded-md hover:bg-slate-700 transition-colors"
+                  className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-blue-400 text-white text-sm sm:text-base font-medium rounded-md hover:bg-blue-500 transition-colors"
                 >
                   Learn More
                 </Link>
@@ -291,8 +291,8 @@ export default function AboutUs() {
 
               <div className="relative bg-gray-100 p-6 rounded-sm">
                 <div className="absolute -top-1 -left-1 w-8 h-8">
-                  <div className="absolute top-0 left-0 w-8 h-2 bg-green-500"></div>
-                  <div className="absolute top-0 left-0 w-2 h-8 bg-green-500"></div>
+                  <div className="absolute top-0 left-0 w-8 h-2 bg-blue-400"></div>
+                  <div className="absolute top-0 left-0 w-2 h-8 bg-blue-400"></div>
                 </div>
                 <div className="flex justify-between items-center">
                   <div>
@@ -303,7 +303,7 @@ export default function AboutUs() {
                     </h3>
                   </div>
                   <div>
-                    <span className="text-4xl font-bold text-green-500">
+                    <span className="text-4xl font-bold text-blue-400">
                       5,000+
                     </span>
                   </div>
@@ -334,23 +334,23 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-      <section className="h-48 sm:h-60 md:h-72 bg-[#1B5E20] content-center">
+      <section className="h-48 sm:h-60 md:h-72 bg-black content-center">
         <div className="flex max-w-[1000px] mx-auto items-center flex-col gap-y-4 sm:gap-y-6 md:gap-y-8">
           <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-semibold flex">OUR COMMITMENTS</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 w-full px-3">
-            <div className="bg-white rounded space-y-2 sm:space-y-3 p-4 sm:p-8 border-b-4 sm:border-b-6 border-[#2E7D32]">
+            <div className="bg-white rounded space-y-2 sm:space-y-3 p-4 sm:p-8 border-b-4 sm:border-b-6 border-blue-400">
               <h4 className="text-lg sm:text-xl font-semibold">
                 Quality Assurance
               </h4>
-              <button className="flex items-center gap-x-2 text-[#2E7D32] text-xs sm:text-sm font-semibold cursor-pointer hover:text-green-700">
+              <button className="flex items-center gap-x-2 text-blue-400 text-xs sm:text-sm font-semibold cursor-pointer hover:text-blue-500">
                 Read More <FaChevronRight />
               </button>
             </div>
-            <div className="bg-white rounded space-y-2 sm:space-y-3 p-4 sm:p-8 border-b-4 sm:border-b-6 border-[#2E7D32]">
+            <div className="bg-white rounded space-y-2 sm:space-y-3 p-4 sm:p-8 border-b-4 sm:border-b-6 border-blue-400">
               <h4 className="text-lg sm:text-xl font-semibold">
                 Customer Satisfaction
               </h4>
-              <button className="flex items-center gap-x-2 text-[#2E7D32] text-xs sm:text-sm font-semibold cursor-pointer hover:text-green-700">
+              <button className="flex items-center gap-x-2 text-blue-400 text-xs sm:text-sm font-semibold cursor-pointer hover:text-blue-500">
                 Read More <FaChevronRight />
               </button>
             </div>
