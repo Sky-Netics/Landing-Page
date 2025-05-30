@@ -72,7 +72,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link href="/careers" className="text-white/60 hover:text-white/80 transition-colors">
-                  Careers (We're hiring!)
+                  Careers (We are hiring!)
                 </Link>
               </li>
               <li>
@@ -127,7 +127,7 @@ const Footer = () => {
         <div className="mt-24 text-white/60 text-sm">
           <p>© Copyright 2025 - Built with love from Europe ©</p>
           <p className="mt-4">
-            Source: Sustainable Limited, including the focus on sustainable non-canonical food of Ireland. Consumer Information: The "Fellow Registered Office," 2019 Digital Print Listed Code No. 1, 2020 Digital Print List.
+            Source: Sustainable Limited, including the focus on sustainable non-canonical food of Ireland. Consumer Information: The Fellow Registered Office 2019 Digital Print Listed Code No. 1, 2020 Digital Print List.
           </p>
           <p className="mt-2">
             Source: Financial, Environmental, and Social Media, Inc., representing the largest global of Finnish Filled Lifestyle (Filled) products for sustainable non-canonical food and food industry.

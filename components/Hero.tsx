@@ -22,7 +22,7 @@ export default function MeetingSection() {
             </h3>
 
             <p className="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed">
-              We'll take on the grunt work of onboarding and verifying vendors and managing benefits and deals. You help
+              We&apos;ll take on the grunt work of onboarding and verifying vendors and managing benefits and deals. You help
               your portcos make smarter decisions.
             </p>
 
@@ -123,7 +123,7 @@ export default function MeetingSection() {
                   { label: "Active Vendors", value: "247", delay: 0.7 },
                   { label: "Cost Savings", value: "$2.4M", delay: 0.9 },
                   { label: "Compliance Rate", value: "98%", delay: 1.1 },
-                ].map((metric, index) => (
+                ].map((metric) => (
                   <motion.div
                     key={metric.label}
                     initial={{ opacity: 0, y: 5 }}

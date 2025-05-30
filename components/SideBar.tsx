@@ -17,8 +17,8 @@ const SideBar= () =>{
             <SideBarAccordion title="Brand" description={
                 <div className="space-y-2">
                     <div className="relative mt-3">
-                        <input type="search" className="pr-2 pl-7 h-11 w-full text-sm rounded-lg border border-gray-300 focus:outline-none" placeholder="Search..." onFocus={(e) => e.target.nextElementSibling.style.display = 'none'}
-                            onBlur={(e) => e.target.value === '' && (e.target.nextElementSibling.style.display = 'block')}
+                        <input type="search" className="pr-2 pl-7 h-11 w-full text-sm rounded-lg border border-gray-300 focus:outline-none" placeholder="Search..." onFocus={(e) => (e.target.nextElementSibling as HTMLElement).style.display = 'none'}
+                            onBlur={(e) => e.target.value === '' && ((e.target.nextElementSibling as HTMLElement).style.display = 'block')}
                         />
                         <button type="submit" className="absolute top-3 start-2 text-lg font-medium">
                             <IoSearch/>
