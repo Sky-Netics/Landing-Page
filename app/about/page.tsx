@@ -14,12 +14,12 @@ import basket from '../../public/Untitled2.png'
 export default function AboutUs() {
   return (
     <>
-      <section className="relative h-[300px] sm:h-[450px] md:h-[600px] lg:h-[700px] overflow-hidden">
+      <section className="relative w-full h-[300px] sm:h-[450px] md:h-[850px] lg:h-[900px] overflow-x-hidden">
         <Image
           src="/supermarket3.jpg"
           alt="FreshMart Supermarket"
           fill
-          className="object-cover object-[30%_70%] opacity-80 brightness-50 hover:brightness-65 transform-all duration-400"
+          className="object-cover object-[30%_70%] opacity-90 brightness-60 hover:brightness-65 transform-all duration-400"
         />
         <Image
           src="https://www.actindo.com/hubfs/Divider-wave-speed-light.svg"
@@ -235,14 +235,14 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-    <section className="px-3 sm:px-4 lg:px-12 sm:px-25 mb-6 sm:mb-10 md:mb-16">
-      <div className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 w-full p-6 sm:p-10 sm:pl-32 space-y-4 sm:space-y-5 relative">
+    <section className="px-3 sm:px-4 lg:px-12 mb-6 sm:mb-10 md:mb-16">
+      <div className=" m-10 bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 w-full p-6 sm:p-10 sm:pl-32 space-y-4 sm:space-y-5 relative">
             <Image
             src={basket}
             alt="Shopping Basket" 
             width={250} 
             height={250} 
-            className="absolute -left-25 -top-5 hidden sm:block rounded-lg"
+            className="absolute -left-15 -top-10 hidden sm:block rounded-lg"
           />
           <h4 className="text-xl sm:text-3xl font-semibold">Need Groceries Delivered?</h4>
           <p className="text-gray-500 text-sm sm:text-base">Experience the convenience of our home delivery service. Fresh groceries delivered right to your doorstep.</p>
@@ -252,7 +252,7 @@ export default function AboutUs() {
       <section className="py-6 sm:py-8 md:py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-14 items-start">
-            <div className="space-y-4 sm:space-y-6">
+            <div className="space-y-4 m-8 sm:space-y-6">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-800">
                 Why Choose FreshMart?
               </h2>
@@ -269,7 +269,7 @@ export default function AboutUs() {
               </div>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 m-8">
                 <div className="relative bg-gray-100 p-6 rounded-lg">
                     <div className="absolute -top-1 -right-1 w-8 h-8">
                     <div className="absolute top-0 right-0 w-8 h-2 bg-black"></div>
@@ -289,10 +289,10 @@ export default function AboutUs() {
                 </div>
               </div>
 
-              <div className="relative bg-gray-100 p-6 rounded-sm">
+              <div className="relative bg-gray-100 p-6 rounded-sm -left-1/6">
                 <div className="absolute -top-1 -left-1 w-8 h-8">
-                  <div className="absolute top-0 left-0 w-8 h-2 bg-blue-400"></div>
-                  <div className="absolute top-0 left-0 w-2 h-8 bg-blue-400"></div>
+                  <div className="absolute top-0 left-0 w-8 h-2 bg-green-400"></div>
+                  <div className="absolute top-0 left-0 w-2 h-8 bg-green-400"></div>
                 </div>
                 <div className="flex justify-between items-center">
                   <div>
@@ -303,7 +303,7 @@ export default function AboutUs() {
                     </h3>
                   </div>
                   <div>
-                    <span className="text-4xl font-bold text-blue-400">
+                    <span className="text-4xl font-bold text-green-400">
                       5,000+
                     </span>
                   </div>
