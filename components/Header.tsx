@@ -66,7 +66,7 @@ export const Header: React.FC= () =>{
     
     return(
         <header className={`flex items-center justify-between w-full z-50 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-15 transition-all duration-300
-            ${scroll ? "fixed bg-white shadow-md text-black h-16 sm:h-20" : "absolute text-black h-24 sm:h-32"}`
+            ${scroll ? "fixed bg-white shadow-md h-16 sm:h-20" : "absolute text-white h-24 sm:h-32"}`
         }>
             {scroll ? 
                 <Image src="/logo2.png" width={300} height={60} alt="FreshMart Supermarket" className="w-32 sm:w-40 md:w-[200px] lg:w-[250px]"/>
