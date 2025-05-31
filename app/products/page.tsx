@@ -5,14 +5,26 @@ import { useQuery } from "@tanstack/react-query"
 import { fetchProductsList } from "@/apis/products.api"
 import { ProductCard, ProductCardSkeleton } from "@/components/ProductCard"
 
-export default function ProductsList() {
-    const [page, setPage] = useState<number>(5);
+export default function ProductsPage() {
+    const [page, setPage] = useState<number>(1);
+    const [sortOrder, setSortOrder] = useState<string | number>("");
 
     const products= useQuery({
+        refetchOnWindowFocus: false,
         queryKey: ["products", page],
-        queryFn: () => fetchProductsList(1, page),
-        refetchOnWindowFocus: false
+        queryFn: () => fetchProductsList(page, 3)
     })
+
+    const sortedProducts= () =>{
+        if (sortOrder=== "newest") {
+            return products.data?.results.sort((a: IProduct, b: IProduct) => new Date(b.created) - new Date(a.created));
+        }else if (sortOrder=== 1) {
+            return products.data?.results.sort((a: IProduct, b: IProduct) => a.avg_rating - b.avg_rating);
+        }else if (sortOrder=== 5) {
+            return products.data?.results.sort((a: IProduct, b: IProduct) => b.avg_rating - a.avg_rating);
+        }
+        return products.data?.results;
+    }
     
     return (
         <section>
@@ -20,13 +32,27 @@ export default function ProductsList() {
                 <span className="py-2.5 flex gap-x-4">
                     <h5 className="text-[1rem]">Sortby:</h5>
                     <span className="text-gray-400 text-sm flex gap-x-2.5 items-center">
-                        <h6 className="cursor-pointer">newest</h6>
-                        <h6 className="cursor-pointer">cheaper</h6>
-                        <h6 className="cursor-pointer">expensive</h6>
-                        <h6 className="cursor-pointer">viewed</h6>
+                        <h6
+                            className="cursor-pointer"
+                            onClick={() => setSortOrder("newest")}
+                        >
+                            newest
+                        </h6>
+                        <h6
+                            className="cursor-pointer"
+                            onClick={() => setSortOrder(1)}
+                        >
+                            cheaper
+                        </h6>
+                        <h6
+                            className="cursor-pointer"
+                            onClick={() => setSortOrder(5)}
+                        >
+                            expensive
+                        </h6>
                     </span>
                 </span>
-                <h4 className="text-gray-400 text-sm">{products.data?.total} products</h4>
+                <h4 className="text-gray-400 text-sm">{products.data?.results.length} products</h4>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {products.isLoading && (
@@ -35,11 +61,11 @@ export default function ProductsList() {
                     ))
                 )}
                 {products.isSuccess && (
-                    products.data?.products.map((product: IProduct) => <ProductCard key={product.id} product={product} />)
+                    sortedProducts().map((product: IProduct, index: number) => <ProductCard key={index} product={product} />)
                 )}
             </div>
-            {products.isSuccess && products.data?.limit< products.data?.total && (
-                <button onClick={() => setPage(page+ 5)} className="text-blue-500 w-full hover:text-blue-700 cursor-pointer mt-5">
+            {products.isSuccess && products.data?.next!== null && (
+                <button onClick={() => setPage(page+ 1)} className="text-blue-500 w-full hover:text-blue-700 cursor-pointer mt-5">
                     Load More
                 </button>
             )}

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { FaStar, FaRegStar } from "react-icons/fa"
 
 export const ProductCardSkeleton: React.FC= () =>{
@@ -13,21 +14,12 @@ export const ProductCardSkeleton: React.FC= () =>{
   )
 }
 export const ProductCard: React.FC<{product: IProduct}>= ({product}) =>{
-  const star= Math.floor(product.rating);
-
   return (
-    <div className="border-y border-r border-gray-200 py-2 px-5 space-y-2 cursor-pointer hover:shadow-lg">
-      <img src={product.thumbnail} alt={product.title} className="place-self-center w-full"/>
-      <h4 className="text-xl font-medium line-clamp-1">{product.title}</h4>
-      <span className="flex">
-        {[...Array(star)].map((_, index) =>(
-          <FaStar key={index}/>
-        ))}
-        {[...Array(5- star)].map((_, index) =>(
-          <FaRegStar key={index+ star}/>
-        ))}
-      </span>
-      <p className="text-base font-medium">₹ {product.price}</p>
+    <div className="border-y border-r border-gray-200 py-2 px-5 flex flex-col justify-between cursor-pointer hover:shadow-lg">
+      <Image src={product.image_url} alt={product.name} width={1440} height={350} className="place-self-center w-full"/>
+      <h4 className="text-xl font-medium line-clamp-1">{product.name}</h4>
+      <h6>{product.avg_rating}</h6>
+      <p className="text-base font-medium">{product.description}</p>
     </div>
   )
 }
