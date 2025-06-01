@@ -11,13 +11,13 @@ import { useRef } from "react";
 
 export default function MeetingSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { 
+  const isInView = useInView(ref, {
     once: false,
-    margin: "-100px"
+    margin: "-50px",
   });
 
   return (
-    <section className="w-full bg-[#cee4e1]">
+    <section className="w-full bg-[#cee4e1] overflow-hidden">
       <div className="w-full px-4 sm:px-6 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -29,24 +29,32 @@ export default function MeetingSection() {
                 </span>
               </h3>
 
-              <motion.p 
+              <motion.p
                 ref={ref}
                 initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                }
                 transition={{ duration: 0.5 }}
                 className="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed"
               >
-                We&apos;re committed to providing the freshest produce, highest quality products, and exceptional service. 
-                Shop with confidence knowing every item meets our strict quality standards.
+                We&apos;re committed to providing the freshest produce, highest
+                quality products, and exceptional service. Shop with confidence
+                knowing every item meets our strict quality standards.
               </motion.p>
 
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                }
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-sm sm:text-base lg:text-lg text-gray-700"
               >
-                Ready to experience the difference? <strong className="font-bold text-gray-900">Start shopping today.</strong>
+                Ready to experience the difference?{" "}
+                <strong className="font-bold text-gray-900">
+                  Start shopping today.
+                </strong>
               </motion.p>
 
               <Link
@@ -58,10 +66,9 @@ export default function MeetingSection() {
               </Link>
             </div>
 
-            {/* Right Images */}
-            <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] order-0 lg:order-none">
+            <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] order-0 lg:order-none overflow-hidden">
               {/* Background Pattern */}
-              <div className="absolute inset-0 z-0 overflow-hidden">
+              <div className="absolute inset-0 z-0">
                 <Image
                   src="https://cdn.prod.website-files.com/637d2ae70bed66dfb5381fc0/637d2ae80bed66601d382041_Pattern.svg"
                   alt="Background pattern"
@@ -74,7 +81,7 @@ export default function MeetingSection() {
               <div className="relative h-full flex items-end justify-end p-2 sm:p-4">
                 <div className="relative w-full h-full max-w-[95%]">
                   <Image
-                    src={supermarket}
+                    src={supermarket || "/placeholder.svg"}
                     alt="Supermarket scene"
                     fill
                     className="object-cover rounded-lg shadow-xl"
@@ -85,71 +92,104 @@ export default function MeetingSection() {
               </div>
 
               <motion.div
-                initial={{ opacity: 0, x: -50, y: -20, rotate: -5 }}
-                animate={isInView ? { opacity: 1, x: 0, y: 0, rotate: 0 } : { opacity: 0, x: -50, y: -20, rotate: -5 }}
-                transition={{ 
+                initial={{ opacity: 0, x: -30, y: -10 }}
+                animate={
+                  isInView
+                    ? { opacity: 1, x: 0, y: 0 }
+                    : { opacity: 0, x: -30, y: -10 }
+                }
+                transition={{
                   type: "spring",
-                  stiffness: 100,
-                  damping: 15,
-                  delay: 0.4 
+                  stiffness: 80,
+                  damping: 20,
+                  delay: 0.4,
                 }}
-                whileHover={{ 
-                  scale: 1.05, 
-                  y: -5,
-                  rotate: 1,
-                  transition: { duration: 0.2 }
+                whileHover={{
+                  scale: 1.02,
+                  transition: { duration: 0.2 },
                 }}
-                className="absolute top-1 left-1 sm:top-4 sm:left-4 z-20 bg-white/95 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-md sm:shadow-lg border border-gray-200 p-2 sm:p-4 w-[140px] sm:w-[180px] md:w-[200px] lg:w-[220px] cursor-pointer"
+                className="absolute top-2 left-2 sm:top-4 sm:left-4 z-20 bg-white/95 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-md sm:shadow-lg border border-gray-200 p-2 sm:p-4 w-[120px] sm:w-[160px] md:w-[180px] lg:w-[200px] cursor-pointer"
+                style={{
+                  maxWidth: "calc(50% - 8px)",
+                }}
               >
                 <h2 className="text-xs sm:text-sm font-semibold text-gray-900 text-center border-b border-gray-200 pb-1 sm:pb-2 mb-2 sm:mb-3">
                   Popular Categories
                 </h2>
                 <div className="space-y-1 sm:space-y-2">
                   {[
-                    { icon: <SiZendesk className="text-purple-600 text-xs sm:text-sm" />, name: "Fresh Produce", bg: "bg-purple-100", delay: 0.7 },
-                    { icon: <SiMailchimp className="text-yellow-600 text-xs sm:text-sm" />, name: "Bakery", bg: "bg-yellow-100", delay: 0.9 },
-                    { icon: <IoLogoSlack className="text-purple-600 text-xs sm:text-sm" />, name: "Dairy", bg: "bg-purple-100", delay: 1.1 },
+                    {
+                      icon: (
+                        <SiZendesk className="text-purple-600 text-xs sm:text-sm" />
+                      ),
+                      name: "Fresh Produce",
+                      bg: "bg-purple-100",
+                      delay: 0.7,
+                    },
+                    {
+                      icon: (
+                        <SiMailchimp className="text-yellow-600 text-xs sm:text-sm" />
+                      ),
+                      name: "Bakery",
+                      bg: "bg-yellow-100",
+                      delay: 0.9,
+                    },
+                    {
+                      icon: (
+                        <IoLogoSlack className="text-purple-600 text-xs sm:text-sm" />
+                      ),
+                      name: "Dairy",
+                      bg: "bg-purple-100",
+                      delay: 1.1,
+                    },
                   ].map((item) => (
                     <motion.div
                       key={item.name}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                      transition={{ 
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={
+                        isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }
+                      }
+                      transition={{
                         type: "spring",
-                        stiffness: 100,
-                        delay: item.delay 
+                        stiffness: 80,
+                        delay: item.delay,
                       }}
-                      whileHover={{ 
-                        x: 5,
-                        transition: { duration: 0.2 }
-                      }}
-                      className="flex items-center gap-2 sm:gap-3"
+                      className="flex items-center gap-1 sm:gap-2"
                     >
-                      <div className={`w-5 h-5 sm:w-6 sm:h-6 ${item.bg} rounded-md sm:rounded-lg flex items-center justify-center`}>
+                      <div
+                        className={`w-4 h-4 sm:w-5 sm:h-5 ${item.bg} rounded-md flex items-center justify-center flex-shrink-0`}
+                      >
                         {item.icon}
                       </div>
-                      <span className="text-xs sm:text-sm font-medium text-gray-800 truncate">{item.name}</span>
+                      <span className="text-xs sm:text-sm font-medium text-gray-800 truncate">
+                        {item.name}
+                      </span>
                     </motion.div>
                   ))}
                 </div>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 50, y: 20, rotate: 5 }}
-                animate={isInView ? { opacity: 1, x: 0, y: 0, rotate: 0 } : { opacity: 0, x: 50, y: 20, rotate: 5 }}
-                transition={{ 
+                initial={{ opacity: 0, x: 30, y: 10 }}
+                animate={
+                  isInView
+                    ? { opacity: 1, x: 0, y: 0 }
+                    : { opacity: 0, x: 30, y: 10 }
+                }
+                transition={{
                   type: "spring",
-                  stiffness: 100,
-                  damping: 15,
-                  delay: 0.5 
+                  stiffness: 80,
+                  damping: 20,
+                  delay: 0.5,
                 }}
-                whileHover={{ 
-                  scale: 1.05, 
-                  y: -5,
-                  rotate: -1,
-                  transition: { duration: 0.2 }
+                whileHover={{
+                  scale: 1.02,
+                  transition: { duration: 0.2 },
                 }}
-                className="absolute bottom-1 right-1 sm:bottom-4 sm:right-4 z-30 bg-white/95 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-md sm:shadow-lg border border-gray-200 p-2 sm:p-4 w-[150px] sm:w-[180px] md:w-[220px] lg:w-[250px] cursor-pointer"
+                className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 z-30 bg-white/95 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-md sm:shadow-lg border border-gray-200 p-2 sm:p-4 w-[130px] sm:w-[160px] md:w-[200px] lg:w-[220px] cursor-pointer"
+                style={{
+                  maxWidth: "calc(55% - 8px)",
+                }}
               >
                 <h3 className="text-xs sm:text-sm font-semibold text-gray-900 mb-2 sm:mb-3">
                   Store Statistics
@@ -157,22 +197,30 @@ export default function MeetingSection() {
                 <div className="space-y-1 sm:space-y-2">
                   {[
                     { label: "Daily Customers", value: "2,500+", delay: 0.8 },
-                    { label: "Products Available", value: "10,000+", delay: 1.0 },
+                    {
+                      label: "Products Available",
+                      value: "10,000+",
+                      delay: 1.0,
+                    },
                     { label: "Customer Rating", value: "4.8/5", delay: 1.2 },
                   ].map((metric) => (
                     <motion.div
                       key={metric.label}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                      transition={{ 
+                      initial={{ opacity: 0, y: 5 }}
+                      animate={
+                        isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 5 }
+                      }
+                      transition={{
                         type: "spring",
-                        stiffness: 100,
-                        delay: metric.delay 
+                        stiffness: 80,
+                        delay: metric.delay,
                       }}
                       className="flex justify-between items-center"
                     >
-                      <span className="text-xs text-gray-600">{metric.label}</span>
-                      <span className="text-xs sm:text-sm font-bold text-blue-400">
+                      <span className="text-xs text-gray-600 truncate pr-1">
+                        {metric.label}
+                      </span>
+                      <span className="text-xs sm:text-sm font-bold text-blue-400 flex-shrink-0">
                         {metric.value}
                       </span>
                     </motion.div>
@@ -180,11 +228,11 @@ export default function MeetingSection() {
                   <motion.div
                     initial={{ scaleX: 0 }}
                     animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
-                    transition={{ 
-                      delay: 1.4, 
-                      duration: 0.8,
+                    transition={{
+                      delay: 1.4,
+                      duration: 0.6,
                       type: "spring",
-                      stiffness: 100
+                      stiffness: 80,
                     }}
                     className="w-full bg-gray-200 rounded-full h-1.5 sm:h-2 mt-2 sm:mt-3 origin-left"
                   >

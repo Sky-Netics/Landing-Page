@@ -14,7 +14,7 @@ export default function Slider() {
       slidesPerView={1}
       modules={[Autoplay]}
       autoplay={{ delay: 3000 }}
-      className="brightness-65 opacity-99 rounded-b-2xl h-screen shadow-2xl"
+      className="brightness-65 opacity-99 rounded-b-2xl h-[500px] md:h-[600px] lg:h-[850px] shadow-2xl"
     >
       <SwiperSlide className="h-full">
         <div className="relative h-full w-full">
@@ -22,17 +22,17 @@ export default function Slider() {
             fill
             alt="Modern Shopping Experience"
             src="/armenia.jpg"
-            className="rounded-b-2xl object-cover"
+            className="rounded-b-2xl h-[500px] md:h-[600px] lg:h-[850px] object-cover"
           />
         </div>
       </SwiperSlide>
       <SwiperSlide className="h-full">
-        <div className="relative h-full w-full">
+        <div className="relative h-full  w-full">
           <Image
             fill
             alt="Fresh Shopping Cart"
             src="/close-up-view-shopping-cart-overloaded-with-food-while-background-female-person-choosing-products.jpg"
-            className="rounded-b-2xl object-cover"
+            className="rounded-b-2xl h-[500px] md:h-[600px] lg:h-[850px] object-cover"
           />
         </div>
       </SwiperSlide>
@@ -42,7 +42,7 @@ export default function Slider() {
             fill
             alt="Safe Shopping"
             src="/person-shopping-with-face-mask.jpg"
-            className="rounded-b-2xl object-cover"
+            className="rounded-b-2xl h-[500px] md:h-[600px] lg:h-[850px] object-cover"
           />
         </div>
       </SwiperSlide>
@@ -52,7 +52,7 @@ export default function Slider() {
             fill
             alt="Safe Shopping"
             src="/vegetable.jpg"
-            className="rounded-b-2xl object-cover"
+            className="rounded-b-2xl h-[500px] md:h-[600px] lg:h-[850px] object-cover"
           />
         </div>
       </SwiperSlide>

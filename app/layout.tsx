@@ -19,12 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="overflow-x-hidden">
+    <html lang="en" >
       <body className={`antialiased scroll-smooth bg-slate-100  ${archivo.className}`}>
         <QueryClintProvider>
           <RefreshProvider>
               <ConditionalHeader/>
-                <div className="max-w-[100rem] mx-auto">
+                <div className="">
                   {children}
                 </div>
               <ConditionalFooter/>
