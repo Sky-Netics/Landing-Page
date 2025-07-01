@@ -17,7 +17,7 @@ export default function AboutUs() {
       <section className="relative">
         <Image
           src={home}
-          alt="Snowflake Logo"
+          alt="RENA Logo"
           width={1440}
           height={350}
           className="w-full max-h-screen object-cover object-[30%_70%] opacity-80 brightness-50 hover:brightness-65 transform-all duration-400"
@@ -29,37 +29,37 @@ export default function AboutUs() {
           height={100}
           className="w-full absolute bottom-0"
         />
-        <h1 className="text-4xl text-white font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">ABOUT US</h1>
+        <h1 className="text-4xl text-white font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">درباره ما</h1>
       </section>
       <section className="my-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-10 px-5">
         <div className="text-center text-[#249EDC] place-items-center space-y-2.5">
-          <h6 className="text-4xl font-black">9,437</h6>
-          <h4 className="font-extrabold text-xl">Global customers</h4>
+          <h6 className="text-4xl font-black">34</h6>
+          <h4 className="font-extrabold text-xl">سال تجربه طلایی</h4>
           <p className="text-black">
-            Thousands of organizations around the world rely on Snowflake to unite siloed data, discover and securely share data and execute diverse workloads.
+            شرکت رنا با 34 سال سابقه درخشان در زمینه واردات و صادرات، یکی از معتبرترین پل‌های تجاری میان ارمنستان و ایران شناخته می‌شود.
           </p>
           <button className="flex items-center gap-x-1.5 font-semibold cursor-pointer hover:text-blue-600">
-            Customer Stories <FaChevronRight className="text-[0.750rem]" />
+            داستان موفقیت <FaChevronRight className="text-[0.750rem]" />
           </button>
         </div>
         <div className="text-center text-[#249EDC] place-items-center space-y-2.5">
-          <h6 className="text-4xl font-black">4.2B</h6>
-          <h4 className="font-extrabold text-xl">Daily Queries</h4>
+          <h6 className="text-4xl font-black">7+</h6>
+          <h4 className="font-extrabold text-xl">کشورهای همکار</h4>
           <p className="text-black">
-            Together, Snowflake customers have more than 4.2 B of data queries on the Data Cloud, with more than 515 million data workloads that run each day.
+            رنا نقش مؤثری در بازارهای ارمنستان، ایران، روسیه، اوکراین، گرجستان، لهستان و سایر کشورها ایفا کرده است.
           </p>
           <button className="flex items-center gap-x-1.5 font-semibold cursor-pointer hover:text-blue-600">
-            Snowflake Platform <FaChevronRight className="text-[0.750rem]" />
+            شبکه بین‌المللی <FaChevronRight className="text-[0.750rem]" />
           </button>
         </div>
         <div className="text-center text-[#249EDC] place-items-center space-y-2.5">
-          <h6 className="text-4xl font-black">2,416</h6>
-          <h4 className="font-extrabold text-xl">Marketplace Listings</h4>
+          <h6 className="text-4xl font-black">15+</h6>
+          <h4 className="font-extrabold text-xl">محصولات تخصصی</h4>
           <p className="text-black">
-            Find, try and buy ready-to-use data and applications from the Snowflake Marketplace to enhance your data and power innovative business solutions.
+            تأمین کننده تخصصی محصولات با کیفیت در حوزه‌های ساختمانی، صنایع غذایی، تولیدی و شیمیایی.
           </p>
           <button className="flex items-center gap-x-1.5 font-semibold cursor-pointer hover:text-blue-600">
-            Snowflake Marketplace <FaChevronRight className="text-[0.750rem]" />
+            محصولات ما <FaChevronRight className="text-[0.750rem]" />
           </button>
         </div>
       </section>
@@ -67,11 +67,10 @@ export default function AboutUs() {
         {/* Leadership Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4">
           <h2 className="text-4xl font-bold">
-            <span className="text-[#249EDC]">MEET OUR</span> LEADERSHIP
+            <span className="text-[#249EDC]">تیم مدیریت</span> رنا
           </h2>
           <p className="text-lg text-gray-600 ">
-            Every employee matters at Snowflake. Meet the team that harnesses
-            all that talent and passion.
+            با تیم حرفه‌ای و با تجربه رنا آشنا شوید که با رهبری دوراندیشانه، این شرکت را به یکی از معتبرترین شرکت‌های بازرگانی تبدیل کرده‌اند.
           </p>
         </div>
 
@@ -80,19 +79,18 @@ export default function AboutUs() {
           {/* Leadership Team - Image Right */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center ">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold">LEADERSHIP TEAM</h3>
+              <h3 className="text-2xl font-bold">تیم اجرایی</h3>
               <p className="text-gray-600">
-                Snowflake CEO Sridhar Ramaswamy and the rest of our executive
-                team are seasoned experts.
+                جناب آقای رضا نافذی، مدیرعامل شرکت رنا و تیم اجرایی ایشان، با سال‌ها تجربه در زمینه بازرگانی بین‌المللی، هدایت این شرکت را بر عهده دارند.
               </p>
               <button className="bg-[#249EDC] hover:bg-blue-600 text-white font-medium rounded-full px-6 py-3 transition">
-                MEET THE TEAM
+                آشنایی با تیم
               </button>
             </div>
             <div className="lg:order-last">
               <Image
                 src="/leadership.png"
-                alt="Leadership team"
+                alt="تیم مدیریت رنا"
                 width={600}
                 height={400}
                 className="rounded-xl shadow-2xl w-full h-auto object-cover  brightness-60 hover:brightness-80 transition-transform transform hover:scale-103"
@@ -105,20 +103,19 @@ export default function AboutUs() {
             <div>
               <Image
                 src="/board.png"
-                alt="Board of directors"
+                alt="نمایندگان شرکت رنا"
                 width={600}
                 height={400}
                 className="rounded-xl shadow-2xl w-full h-auto object-cover brightness-60 hover:brightness-80 transition-transform transform hover:scale-103"
               />
             </div>
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold">BOARD OF DIRECTORS</h3>
+              <h3 className="text-2xl font-bold">نمایندگی‌های بین‌المللی</h3>
               <p className="text-gray-600">
-                Thanks to the guidance of our board, Snowflake continues to
-                serve customers worldwide.
+                شرکت رنا به عنوان نماینده رسمی معتبرترین شرکت‌های بزرگ ایرانی در ارمنستان، آماده همکاری مطمئن و سودآور با تمامی شرکای تجاری می‌باشد.
               </p>
               <button className="bg-[#249EDC] hover:bg-blue-600 text-white font-medium rounded-full px-6 py-3 transition">
-                MEET THE TEAM
+                اطلاعات تماس
               </button>
             </div>
           </div>
@@ -126,23 +123,22 @@ export default function AboutUs() {
       </section>
       <section className="py-20">
         <div className="max-w-3xl mx-auto text-center space-y-4 px-4">
-          <h2 className="text-4xl font-bold">OUR VALUES</h2>
+          <h2 className="text-4xl font-bold">ارزش‌های ما</h2>
           <p className="text-lg text-gray-600">
-            Our values represent who we are, at our best. We seek to exhibit
-            these values every day.
+            ارزش‌های شرکت رنا نشان‌دهنده هویت و اصول ماست که در تمام تعاملات تجاری رعایت می‌کنیم.
           </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto px-4 mt-12">
           {[
-            { icon: <TfiCrown />, title: "Integrity Always" },
-            { icon: <VscLaw />, title: "Put Customers First" },
-            { icon: <GiBrain />, title: "Think Big" },
-            { icon: <TfiMedall />, title: "Be Excellent" },
-            { icon: <LuListTodo />, title: "Get It Done" },
-            { icon: <BiDonateHeart />, title: "Own It" },
-            { icon: <IoSnowOutline />, title: "Embrace Differences" },
-            { icon: <TfiCrown />, title: "Customer Focus" },
+            { icon: <TfiCrown />, title: "کیفیت بی‌نظیر" },
+            { icon: <VscLaw />, title: "رعایت استانداردها" },
+            { icon: <GiBrain />, title: "تفکر استراتژیک" },
+            { icon: <TfiMedall />, title: "تخصص و تجربه" },
+            { icon: <LuListTodo />, title: "تعهد به انجام کار" },
+            { icon: <BiDonateHeart />, title: "مسئولیت‌پذیری" },
+            { icon: <IoSnowOutline />, title: "تنوع محصولات" },
+            { icon: <TfiCrown />, title: "تمرکز بر مشتری" },
           ].map((item, index) => (
             <div
               key={index}
@@ -157,18 +153,18 @@ export default function AboutUs() {
         </div>
       </section>
       <section className="space-y-20 mb-20">
-        <h2 className="text-3xl font-bold text-center">OUR OFFICES</h2>
+        <h2 className="text-3xl font-bold text-center">دفاتر ما</h2>
         <div className="flex px-5 space-x-5 items-center max-w-[1000px] mx-auto">
           <div className="space-y-3">
-            <h4 className="text-xl font-bold">SNOWFLAKE SPANS THE GLOBE</h4>
-            <p>{`We're globally-distributed enterprise, with more than 6,780+ employees working in over 40+ offices worldwide (as of October 2023).`}</p>
+            <h4 className="text-xl font-bold">شرکت بین‌المللی رنا</h4>
+            <p>شرکت با مسئولیت محدود "رنا" با کد مالیاتی ۰۱۸۲۸۲۷۸ در ارمنستان، ایروان، منطقه داوتاشن، خیابان آ. میکویان، پلاک ۲۲/۱، کد پستی ۰۰۵۴ مستقر است.</p>
             <button className="bg-[#249EDC] text-white text-sm font-semibold rounded-full py-3 px-5 cursor-pointer hover:bg-blue-600">
-              SEE OUR LOCATIONS
+              مشاهده آدرس
             </button>
           </div>
           <Image
             src="/office.png"
-            alt="Leadership team"
+            alt="دفتر مرکزی رنا"
             width={600}
             height={300}
             className="rounded-xl shadow-2xl w-full h-auto object-cover brightness-60 hover:brightness-80 transition-transform transform hover:scale-103"
@@ -177,62 +173,76 @@ export default function AboutUs() {
       </section>
       <section className="px-5 lg:px-15 xl:px-25 relative">
         <Image width={1440} height={300} src="/armenia1.webp" alt="" className="h-64 object-cover object-[50%_80%] brightness-65"/>
-        <h6 className="text-white text-3xl absolute top-1/4 left-1/4">A WORLD-CLASS BUSINESS AND INDUSTRIAL HUB</h6>
+        <h6 className="text-white text-3xl absolute top-1/4 left-1/4">مرکز تجارت بین‌المللی در ارمنستان</h6>
       </section>
       <section className="px-5 lg:px-15 xl:px-25 my-10">
         <div className="flex flex-col sm:flex-row">
           <div className="w-full sm:w-1/4 mb-6 md:mb-0 relative before:absolute before:top-[-15px] before:left-[-15px] before:border-t-20 before:border-l-6 before:border-gray-200 after:absolute after:top-[-15px] after:left-[-15px] after:border-t-6 after:border-l-20 after:border-gray-200">
             <h2 className="text-4xl font-bold tracking-wider">
-              Our
+              محصولات
               <br />
-              Services
+              ما
             </h2>
           </div>
           <div className="w-full sm:w-3/4 space-y-10">
             <div>
               <div className="flex justify-between items-center text-orange-400 mb-5">
-                <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">Waste Management</h3>
+                <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">محصولات لبنی</h3>
                 <RiArrowDropRightLine className="text-5xl border-b-3"/>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-500 text-xl">
                 <div className="flex items-center">
                   <RiArrowDropRightLine className="text-2xl"/>
-                  <span>UCO Collecting</span>
+                  <span>کره مرغوب</span>
                 </div>
                 <div className="flex items-center">
                   <RiArrowDropRightLine className="text-2xl"/>
-                  <span>Collect Request</span>
+                  <span>پودر شیر با کیفیت</span>
                 </div>
                 <div className="flex items-center">
                   <RiArrowDropRightLine className="text-2xl"/>
-                  <span>Fresh Pickups</span>
+                  <span>خامه شیر</span>
                 </div>
               </div>
             </div>
             <div>
               <div className="flex justify-between items-center text-green-700 mb-5">
-                <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">International Waste Trade</h3>
+                <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">محصولات صنعتی</h3>
                 <RiArrowDropRightLine className="text-5xl border-b-3"/>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-500 text-xl">
                 <div className="flex items-center">
                   <RiArrowDropRightLine className="text-2xl"/>
-                  <span>UCO Collecting</span>
+                  <span>دیگ‌های بخار صنعتی</span>
                 </div>
                 <div className="flex items-center">
                   <RiArrowDropRightLine className="text-2xl"/>
-                  <span>Collect Request</span>
+                  <span>سیستم‌های تبرید</span>
                 </div>
                 <div className="flex items-center">
                   <RiArrowDropRightLine className="text-2xl"/>
-                  <span>Fresh Pickups</span>
+                  <span>تانکرهای استیل</span>
                 </div>
               </div>
             </div>
             <div>
               <div className="flex justify-between items-center mb-5">
-                <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">Oit & Fat Processing</h3>
+                <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">مواد ساختمانی</h3>
                 <RiArrowDropRightLine className="text-5xl border-b-3"/>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-500 text-xl">
+                <div className="flex items-center">
+                  <RiArrowDropRightLine className="text-2xl"/>
+                  <span>ایزوگام استاندارد</span>
+                </div>
+                <div className="flex items-center">
+                  <RiArrowDropRightLine className="text-2xl"/>
+                  <span>پانل‌های ساندویچی</span>
+                </div>
+                <div className="flex items-center">
+                  <RiArrowDropRightLine className="text-2xl"/>
+                  <span>آجر نسوز</span>
+                </div>
               </div>
             </div>
           </div>
@@ -240,10 +250,10 @@ export default function AboutUs() {
       </section>
     <section className="px-12 sm:px-25 mb-20">
       <div className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 w-full p-10 sm:pl-32 space-y-5 relative">
-        <Image src="/Untitled2.png" alt="Perfume" width={250} height={250} className="absolute -left-25 -top-5 hidden sm:block"/>
-        <h4 className="text-3xl font-semibold">Need to trade your International Waste?</h4>
-        <p className="text-gray-500">We are here for you to offer Lorem ipsum dolor sit amet, con sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-        <button className="border-b-2 cursor-pointer text-green-600 hover:text-green-800">Read More Here</button>
+        <Image src="/Untitled2.png" alt="محصولات رنا" width={250} height={250} className="absolute -left-25 -top-5 hidden sm:block"/>
+        <h4 className="text-3xl font-semibold">نیاز به محصولات باکیفیت دارید؟</h4>
+        <p className="text-gray-500">شرکت رنا با 34 سال تجربه در زمینه واردات و صادرات، آماده ارائه بهترین محصولات با کیفیت عالی و قیمت رقابتی می‌باشد.</p>
+        <button className="border-b-2 cursor-pointer text-green-600 hover:text-green-800">اطلاعات بیشتر</button>
       </div>
     </section>
       <section className="md:space-x-4 space-y-4">
@@ -264,7 +274,7 @@ export default function AboutUs() {
 
           <div className="relative z-10 max-w-6xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-white mt-4 mb-10">
-              How UCO collection works?
+              فرآیند همکاری با رنا چگونه است؟
             </h2>
 
             <div className="md:hidden space-y-6 space-x-16">
@@ -284,10 +294,10 @@ export default function AboutUs() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Schedule
+                    تماس اولیه
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Schedule your desired time via website, app, or phone.
+                    از طریق تلفن، واتساپ یا ایمیل با ما در ارتباط باشید.
                   </p>
                 </div>
               </div>
@@ -308,11 +318,10 @@ export default function AboutUs() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Contract and Bin Delivery
+                    مذاکره و توافق
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Our representative will arrive at the agreed time for
-                    contract signing and bin handover.
+                    بررسی نیازهای شما و ارائه پیشنهاد مناسب توسط کارشناسان ما.
                   </p>
                 </div>
               </div>
@@ -333,11 +342,10 @@ export default function AboutUs() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Rewards & Fresh Pickups
+                    عقد قرارداد
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Cash, bank transfers, or a wide range of competitively
-                    priced fresh products.
+                    انعقاد قرارداد رسمی با شرایط شفاف و تضمین کیفیت.
                   </p>
                 </div>
               </div>
@@ -358,11 +366,10 @@ export default function AboutUs() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Regular Collection Day
+                    تحویل محصول
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Routine visits for oil collection at scheduled intervals or
-                    based on your needs.
+                    تحویل به موقع محصولات با کیفیت تضمین شده.
                   </p>
                 </div>
               </div>
@@ -431,40 +438,37 @@ export default function AboutUs() {
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-4">
                 <div className="text-center">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Schedule
+                    تماس اولیه
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Schedule your desired time via website, app, or phone.
+                    از طریق تلفن، واتساپ یا ایمیل با ما در ارتباط باشید.
                   </p>
                 </div>
 
                 <div className="text-center">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Contract and Bin Delivery
+                    مذاکره و توافق
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Our representative will arrive at the agreed time for
-                    contract signing and bin handover.
+                    بررسی نیازهای شما و ارائه پیشنهاد مناسب توسط کارشناسان ما.
                   </p>
                 </div>
 
                 <div className="text-center">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Rewards & Fresh Pickups
+                    عقد قرارداد
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Cash, bank transfers, or a wide range of competitively
-                    priced fresh products.
+                    انعقاد قرارداد رسمی با شرایط شفاف و تضمین کیفیت.
                   </p>
                 </div>
 
                 <div className="text-center">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Regular Collection Day
+                    تحویل محصول
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Routine visits for oil collection at scheduled intervals or
-                    based on your needs.
+                    تحویل به موقع محصولات با کیفیت تضمین شده.
                   </p>
                 </div>
               </div>
@@ -477,28 +481,23 @@ export default function AboutUs() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
             <div className=" space-x-2 space-y-16">
               <h2 className="text-3xl md:text-3xl  font-bold text-slate-800">
-                Who we are?
+                شرکت رنا کیست؟
               </h2>
               <p className="text-slate-600 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               
+                شرکت بازرگانی بین‌المللی "رنا" با 34 سال تجربه طلایی در عرصه تجارت، از سال ۱۹۹۱ تاکنون با گام‌های استوار در مسیر توسعه و پیشرفت حرکت کرده و امروز به عنوان یکی از معتبرترین پل‌های تجاری میان ارمنستان و ایران شناخته می‌شود. ما تأمین‌کننده تخصصی محصولات با کیفیت در حوزه‌های ساختمانی، صنایع غذایی، تولیدی و شیمیایی هستیم.
               </p>
               <div>
                 <Link
                   href="/about"
                   className="inline-block px-6 py-3 bg-slate-600 text-white font-medium rounded-md hover:bg-slate-700 transition-colors"
                 >
-                  Learn More
+                  بیشتر بدانید
                 </Link>
               </div>
             </div>
 
             <div className="space-y-6">
               <div>
-
-              
                 <div className="relative bg-gray-100 p-6 rounded-lg">
                     <div className="absolute -top-1 -right-1 w-8 h-8">
                     <div className="absolute top-0 right-0 w-8 h-2 bg-black"></div>
@@ -507,12 +506,12 @@ export default function AboutUs() {
                     <div className="flex justify-between items-center">
                     <div>
                         <h3 className="text-lg font-semibold text-slate-800">
-                        Vans & Drivers
+                        سال تجربه
                         </h3>
                     </div>
                     <div>
                         <span className="text-4xl font-bold text-slate-800">
-                        230+
+                        34+
                         </span>
                     </div>
                     </div>
@@ -527,14 +526,14 @@ export default function AboutUs() {
                 <div className="flex justify-between items-center">
                   <div>
                     <h3 className="text-lg font-semibold text-slate-800">
-                      International
+                      همکاران
                       <br />
-                      Clients
+                      بین‌المللی
                     </h3>
                   </div>
                   <div>
                     <span className="text-4xl font-bold text-green-500">
-                      230+
+                      7+
                     </span>
                   </div>
                 </div>
@@ -548,14 +547,14 @@ export default function AboutUs() {
                 <div className="flex justify-between items-center">
                   <div>
                     <h3 className="text-lg font-semibold text-slate-800">
-                      UCO
+                      محصولات
                       <br />
-                      Collection
+                      تخصصی
                     </h3>
                   </div>
                   <div>
                     <span className="text-4xl font-bold text-yellow-500">
-                      230+
+                      15+
                     </span>
                   </div>
                 </div>
@@ -566,22 +565,25 @@ export default function AboutUs() {
       </section>
       <section className="h-80 bg-[#11567F] content-center">
         <div className="flex max-w-[1000px] mx-auto items-center flex-col gap-y-10">
-          <h2 className="text-white text-3xl font-semibold flex">POLICES</h2>
+          <h2 className="text-white text-3xl font-semibold flex">اطلاعات تماس</h2>
           <div className="grid sm:grid-cols-2 space-x-10 w-full">
             <div className="bg-white rounded space-y-3 p-8 border-b-6 border-[#249EDC]">
               <h4 className="text-xl font-semibold">
-                Global Code of Conduct and Ethics
+                تماس با ما
               </h4>
+              <p className="text-gray-600">تلفن: ‪700066  11  (374) +‬</p>
+              <p className="text-gray-600">واتساپ: 155145 44  (374) +</p>
               <button className="flex items-center gap-x-2 text-[#249EDC] text-sm font-semibold cursor-pointer hover:text-blue-600">
-                Read More <FaChevronRight />
+                اطلاعات بیشتر <FaChevronRight />
               </button>
             </div>
             <div className="bg-white rounded space-y-3 p-8 border-b-6 border-[#249EDC]">
               <h4 className="text-xl font-semibold">
-                Business Partner Standards of Conduct
+                آدرس دفتر مرکزی
               </h4>
+              <p className="text-gray-600">ایروان، خیابان آ. میکویان، پلاک 22/1</p>
               <button className="flex items-center gap-x-2 text-[#249EDC] text-sm font-semibold cursor-pointer hover:text-blue-600">
-                Read More <FaChevronRight />
+                مشاهده روی نقشه <FaChevronRight />
               </button>
             </div>
           </div>

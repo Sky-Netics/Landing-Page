@@ -1,30 +1,45 @@
 import Advertisement from "./Advertisement"
 
 export default function AdvertisementSection() {
-  const advertisements= [
+  const advertisements = [
     {
       image: "/woman.png",
-      title: "Rent Reporting",
-      description: "We help you get the credit you deserve for paying your rent on time. By reporting your monthly rent payments, you may get the credit increases needed to purchase a home."
+      title: "واردات کره مرغوب",
+      description: "شرکت رنا با واردات کره با کیفیت بالا از تولیدکنندگان معتبر بین‌المللی، محصولی مطابق با تمام استانداردهای بهداشتی و کیفی را ارائه می‌دهد. کره‌های وارداتی همراه با گواهینامه‌های بین‌المللی عرضه می‌شوند."
     },
     {
       image: "/man.png",
-      title: "Buy a Home",
-      description: "Get connected with a lender that specializes in FHA loans for credit challenged and first time home buyers. We also offer Realtor services in your market to simplify the shopping and purchase process."
+      title: "خامه شیر با کیفیت",
+      description: "خامه شیر وارداتی عمده از تولیدکنندگان معتبر ایرانی با طعم و بافت طبیعی و بدون مواد افزودنی. مناسب برای تولیدات لبنی، شیرینی‌پزی، نوشیدنی‌های گرم و سرد و سس‌ها."
+    },
+    {
+      image: "/man.png",
+      title: "تجهیزات صنعتی",
+      description: "تأمین تخصصی تجهیزات صنعتی شامل دیگ‌های بخار، سیستم‌های تبرید، تانکرهای استیل و سردخانه‌های صنعتی با کیفیت بالا و قیمت رقابتی."
     }
   ]
   
   return (
     <section className="place-items-center text-center mt-16 mb-4 px-5 lg:px-15 xl:px-25">
-      <h2 className="text-[40px] mb-7">What We Do</h2>
-      <p className="text-lg text-gray-500 max-w-3xl mb-20">
-        We help those with credit challenges and first-time home buyers connect with lenders suitable for their credit situation. Additionally, we assist renters in improving their credit scores.
+      <h2 className="text-[40px] mb-7 font-bold">خدمات و محصولات رنا</h2>
+      <p className="text-lg text-gray-500 max-w-3xl mb-20 mx-auto">
+        شرکت بازرگانی بین‌المللی رنا با 34 سال تجربه درخشان، ارائه‌دهنده محصولات با کیفیت در حوزه‌های غذایی، صنعتی و ساختمانی با تضمین کیفیت و قیمت مناسب
       </p>
-      <div className="flex flex-col sm:flex-row gap-5">
-        {advertisements.map((item, index) =>(
-          <Advertisement key={index} title={item.title} description={item.description} image={item.image} index={index}/>
+      <div className="flex flex-col sm:flex-row gap-8 justify-center">
+        {advertisements.map((item, index) => (
+          <Advertisement 
+            key={index} 
+            title={item.title} 
+            description={item.description} 
+            image={item.image} 
+            index={index}
+          />
         ))}
       </div>
     </section>
   )
 }
+
+
+"/woman.png"
+"/man.png"

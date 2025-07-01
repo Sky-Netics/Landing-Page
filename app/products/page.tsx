@@ -9,64 +9,71 @@ export default function ProductsPage() {
     const [perPage, setPerPage] = useState<number>(3);
     const [sortOrder, setSortOrder] = useState<string | number>("");
 
-    const products= useQuery({
+    const products = useQuery({
         refetchOnWindowFocus: false,
         queryKey: ["products", perPage],
         queryFn: () => fetchProductsList(1, perPage)
     })
 
-    const sortedProducts= () =>{
-        if (sortOrder=== "newest") {
+    const sortedProducts = () => {
+        if (sortOrder === "newest") {
             return products.data?.results.sort((a: IProduct, b: IProduct) => new Date(b.created) - new Date(a.created));
-        }else if (sortOrder=== 1) {
-            return products.data?.results.sort((a: IProduct, b: IProduct) => a.avg_rating - b.avg_rating);
-        }else if (sortOrder=== 5) {
-            return products.data?.results.sort((a: IProduct, b: IProduct) => b.avg_rating - a.avg_rating);
+        } else if (sortOrder === 1) {
+            return products.data?.results.sort((a: IProduct, b: IProduct) => a.price - b.price);
+        } else if (sortOrder === 5) {
+            return products.data?.results.sort((a: IProduct, b: IProduct) => b.price - a.price);
         }
         return products.data?.results;
     }
     
     return (
-        <section>
-            <div className="flex justify-between items-center">
-                <span className="py-2.5 flex gap-x-4">
-                    <h5 className="text-[1rem]">Sortby:</h5>
-                    <span className="text-gray-400 text-sm flex gap-x-2.5 items-center">
+        <section className="container mx-auto px-4 py-8">
+            <div className="flex justify-between items-center mb-6">
+                <span className="py-2 flex gap-x-4 items-center">
+                    <h5 className="text-[1rem] font-medium">مرتب‌سازی بر اساس:</h5>
+                    <span className="text-gray-500 text-sm flex gap-x-4 items-center">
                         <h6
-                            className="cursor-pointer"
+                            className="cursor-pointer hover:text-blue-600"
                             onClick={() => setSortOrder("newest")}
                         >
-                            newest
+                            جدیدترین
                         </h6>
                         <h6
-                            className="cursor-pointer"
+                            className="cursor-pointer hover:text-blue-600"
                             onClick={() => setSortOrder(1)}
                         >
-                            cheaper
+                            ارزان‌ترین
                         </h6>
                         <h6
-                            className="cursor-pointer"
+                            className="cursor-pointer hover:text-blue-600"
                             onClick={() => setSortOrder(5)}
                         >
-                            expensive
+                            گران‌ترین
                         </h6>
                     </span>
                 </span>
-                <h4 className="text-gray-400 text-sm">{products.data?.count} products</h4>
+                <h4 className="text-gray-500 text-sm">{products.data?.count} محصول</h4>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {products.isLoading && (
-                    Array.from({length: 5}, (_, index) =>(
+                    Array.from({length: 5}, (_, index) => (
                         <ProductCardSkeleton key={index}/>
                     ))
                 )}
                 {products.isSuccess && (
-                    sortedProducts().map((product: IProduct, index: number) => <ProductCard key={index} product={product} />)
+                    sortedProducts().map((product: IProduct, index: number) => (
+                        <ProductCard key={index} product={product} />
+                    ))
                 )}
             </div>
-            {products.isSuccess && products.data?.limit< products.data?.count && (
-                <button onClick={() => setPerPage(perPage+ 5)} className="text-blue-500 w-full hover:text-blue-700 cursor-pointer mt-5">
-                    Load More
+            
+            {products.isSuccess && products.data?.limit < products.data?.count && (
+                <button 
+                    onClick={() => setPerPage(perPage + 5)} 
+                    className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-md mt-8 mx-auto block transition-colors"
+                >
+                    نمایش محصولات بیشتر
                 </button>
             )}
         </section>

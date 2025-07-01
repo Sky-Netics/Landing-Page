@@ -1,40 +1,55 @@
 import Article from "./Article"
 
 export default function Learning() {
-  const articles= [
+  const articles = [
     {
-      tag: "Home Buying",
+      tag: "صنایع غذایی",
       image: "/family.png",
-      title: "Down Payment Assistance To Purchase A Home",
-      description: "HomeLoanGurus' preferred lender partner, Cardinal Financial is offering a down payment assistance program for first time home buyers. Qualification are similar to an FHA loan."
+      title: "استانداردهای بین‌المللی تولید کره مرغوب",
+      description: "آشنایی با استانداردهای جهانی تولید کره و نحوه انتخاب بهترین تولیدکنندگان بین‌المللی توسط تیم کنترل کیفیت رنا"
     },
     {
       image: "/phone.png",
-      tag: "Credit Improvement",
-      title: "Difference Between Vantage Scores and FICO Scores",
-      description: "Learn the differences between a Vantage credit score and a FICO credit score."
+      tag: "تجهیزات صنعتی",
+      title: "انتخاب دیگ‌های بخار برای صنایع لبنی",
+      description: "معیارهای فنی انتخاب دیگ‌های بخار با ظرفیت مناسب برای کارخانه‌های تولید لبنیات و شیرینی‌پزی"
     },
     {
       image: "/report.png",
-      tag: "Rent Reporting",
-      title: "Benefits Of HomeLoanGurus' Credit Monitoring Tools",
-      description: "HomeLoanGurus offers credit monitoring tools so you can track the increases or decreases of your credit score as you prepare to purchase a home."
+      tag: "فرآیند واردات",
+      title: "مراحل قانونی واردات محصولات غذایی به ارمنستان",
+      description: "راهنمای کامل فرآیند گمرکی و استانداردهای لازم برای واردات محصولات غذایی به بازار ارمنستان"
     }
   ]
 
   return (
     <section className="space-y-10 my-16 px-5 lg:px-15 xl:px-25 flex flex-col justify-center items-center">
-      <h2 className="text-4xl font-medium">Learning Hub</h2>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {articles.map((article) =>(
-          <Article key={article.title} tag={article.tag} image={article.image} title={article.title} description={article.description}/>
+      <div className="text-center space-y-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">مرکز آموزشی رنا</h2>
+        <p className="text-lg text-gray-600 max-w-2xl">
+          مقالات تخصصی در زمینه صنایع غذایی، تجهیزات صنعتی و فرآیندهای واردات و صادرات
+        </p>
+      </div>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+        {articles.map((article) => (
+          <Article 
+            key={article.title} 
+            tag={article.tag} 
+            image={article.image} 
+            title={article.title} 
+            description={article.description}
+          />
         ))}
       </div>
       <button
-        className="px-7 py-3 border text-[16px] border-blue-400 rounded-lg cursor-pointer font-normal hover:text-white hover:bg-blue-400"
+        className="px-7 py-3 border-2 text-[16px] border-blue-600 rounded-lg cursor-pointer font-medium hover:text-white hover:bg-blue-600 transition-colors mt-6"
       >
-        View All
+        مشاهده همه مقالات
       </button>
     </section>
   )
 }
+
+
+
+
