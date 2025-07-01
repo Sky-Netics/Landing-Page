@@ -4,27 +4,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { SlCalender } from "react-icons/sl";
 import supermarket from "@/public/supermarket.jpg";
-import { SiZendesk, SiMailchimp } from "react-icons/si";
-import { IoLogoSlack } from "react-icons/io";
 import { motion } from "framer-motion";
 
 export default function MeetingSection() {
   return (
-    <section className="min-h-screen px-4 py-12 sm:py-0 bg-[#cee4e1] flex items-center overflow-hidden">
-      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+    <section className="min-h-screen w-full px-4 py-12 sm:py-0 bg-[#cee4e1] flex items-center justify-center overflow-x-hidden">
+      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Left Content */}
           <motion.div 
-            className="space-y-4 sm:space-y-6 order-1 lg:order-none"
+            className="space-y-4 sm:space-y-6 order-1 lg:order-none w-full"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, margin: "-100px" }}
+            viewport={{ once: false, margin: "0px" }}
             transition={{ duration: 0.6 }}
           >
             <motion.h3
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: false, margin: "-100px" }}
+              viewport={{ once: false }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-2xl sm:text-3xl lg:text-4xl font-thin leading-tight text-gray-900/90"
             >
@@ -37,7 +35,7 @@ export default function MeetingSection() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: "-100px" }}
+              viewport={{ once: false }}
               transition={{ delay: 0.3, duration: 0.5 }}
               className="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed"
             >
@@ -47,7 +45,7 @@ export default function MeetingSection() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: "-100px" }}
+              viewport={{ once: false }}
               transition={{ delay: 0.4, duration: 0.5 }}
               className="text-sm sm:text-base lg:text-lg text-gray-700"
             >
@@ -57,7 +55,7 @@ export default function MeetingSection() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: "-100px" }}
+              viewport={{ once: false }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
               <Link
@@ -72,28 +70,29 @@ export default function MeetingSection() {
 
           {/* Right Images */}
           <motion.div 
-            className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] order-0 lg:order-none"
+            className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] order-0 lg:order-none w-full"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: false, margin: "-100px" }}
+            viewport={{ once: false, margin: "0px" }}
             transition={{ duration: 0.6 }}
           >
             {/* Background Pattern */}
-            <div className="absolute inset-0 z-0 overflow-hidden">
+            <div className="absolute inset-0 z-0 overflow-hidden w-full h-full">
               <Image
                 src="https://cdn.prod.website-files.com/637d2ae70bed66dfb5381fc0/637d2ae80bed66601d382041_Pattern.svg"
                 alt="Background pattern"
                 fill
                 className="object-cover opacity-20"
                 quality={30}
+                sizes="100vw"
               />
             </div>
 
-            <div className="relative h-full flex items-end justify-end p-2 sm:p-4">
+            <div className="relative h-full w-full flex items-end justify-end p-2 sm:p-4">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: false, margin: "-100px" }}
+                viewport={{ once: false }}
                 transition={{ delay: 0.2, duration: 0.6 }}
                 className="relative w-full h-full max-w-[95%]"
               >
@@ -104,6 +103,7 @@ export default function MeetingSection() {
                   className="object-cover rounded-lg shadow-xl"
                   quality={80}
                   priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </motion.div>
             </div>
@@ -112,7 +112,7 @@ export default function MeetingSection() {
             <motion.div
               initial={{ opacity: 0, x: -30, y: -10 }}
               whileInView={{ opacity: 1, x: 0, y: 0 }}
-              viewport={{ once: false, margin: "-100px" }}
+              viewport={{ once: false }}
               transition={{ duration: 0.6, delay: 0.3 }}
               whileHover={{ scale: 1.03, y: -3 }}
               className="absolute top-1 left-1 sm:top-4 sm:left-4 z-20 bg-white/95 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-md sm:shadow-lg border border-gray-200 p-2 sm:p-4 w-[140px] sm:w-[180px] md:w-[200px] lg:w-[220px] cursor-pointer"
@@ -120,7 +120,7 @@ export default function MeetingSection() {
               <motion.h2
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: false, margin: "-100px" }}
+                viewport={{ once: false }}
                 transition={{ delay: 0.5 }}
                 className="text-xs sm:text-sm font-semibold text-gray-900 text-center border-b border-gray-200 pb-1 sm:pb-2 mb-2 sm:mb-3"
               >
@@ -136,7 +136,7 @@ export default function MeetingSection() {
                     key={index}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: false, margin: "-100px" }}
+                    viewport={{ once: false }}
                     transition={{ delay: item.delay }}
                     whileHover={{ x: 3 }}
                     className="flex items-center gap-2 sm:gap-3"
@@ -154,7 +154,7 @@ export default function MeetingSection() {
             <motion.div
               initial={{ opacity: 0, x: 30, y: 10 }}
               whileInView={{ opacity: 1, x: 0, y: 0 }}
-              viewport={{ once: false, margin: "-100px" }}
+              viewport={{ once: false }}
               transition={{ duration: 0.6, delay: 0.4 }}
               whileHover={{ scale: 1.03, y: -3 }}
               className="absolute bottom-1 right-1 sm:bottom-4 sm:right-4 z-30 bg-white/95 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-md sm:shadow-lg border border-gray-200 p-2 sm:p-4 w-[150px] sm:w-[180px] md:w-[220px] lg:w-[250px] cursor-pointer"
@@ -162,7 +162,7 @@ export default function MeetingSection() {
               <motion.h3
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: false, margin: "-100px" }}
+                viewport={{ once: false }}
                 transition={{ delay: 0.6 }}
                 className="text-xs sm:text-sm font-semibold text-gray-900 mb-2 sm:mb-3"
               >
@@ -178,7 +178,7 @@ export default function MeetingSection() {
                     key={metric.label}
                     initial={{ opacity: 0, y: 5 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: false, margin: "-100px" }}
+                    viewport={{ once: false }}
                     transition={{ delay: metric.delay }}
                     className="flex justify-between items-center"
                   >
@@ -191,7 +191,7 @@ export default function MeetingSection() {
                 <motion.div
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
-                  viewport={{ once: false, margin: "-100px" }}
+                  viewport={{ once: false }}
                   transition={{ delay: 1.3, duration: 0.6 }}
                   className="w-full bg-gray-200 rounded-full h-1.5 sm:h-2 mt-2 sm:mt-3 origin-left"
                 >

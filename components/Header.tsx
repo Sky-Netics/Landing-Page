@@ -7,6 +7,9 @@ import { IoMdMenu } from "react-icons/io"
 import { BiSolidPhoneCall } from "react-icons/bi"
 import { FaCircleQuestion } from "react-icons/fa6"
 import { usePathname, useRouter } from "next/navigation"
+import logo from '../public/Rena_LLC__2_-removebg-preview.png';
+import logo2 from '../public/Rena_LLC__6_-removebg-preview.png';
+
 
 export const Header: React.FC= () =>{
     const [scroll, setScroll] = React.useState<boolean>(false);
@@ -64,9 +67,9 @@ export const Header: React.FC= () =>{
             ${scroll ? "fixed bg-white shadow-md text-green-700 h-20" : "absolute text-white h-32"}`
         }>
             {scroll ? 
-                <Image src="/logo2.png" width={300} height={60} alt="Logo" className="w-1/2 sm:w-[250px]"/>
+                <Image src={logo} width={300} height={60} alt="Logo" className="w-1/2 sm:w-[250px] "/>
                 : 
-                <Image src="/logo.png" width={300} height={60} alt="Logo" className="w-1/2 sm:w-[300px]"/>
+                <Image src={logo2} width={300} height={60} alt="Logo" className="w-1/2 sm:w-[300px] "/>
             }
             <div className="space-y-5 hidden lg:block">
                 <ul className={`justify-end text-sm font-medium ${scroll ? "hidden" : " flex"}`}>

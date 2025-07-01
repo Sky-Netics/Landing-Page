@@ -8,7 +8,7 @@ import AdvertisementSection from "@/components/AdvertisementSection"
 
 export default function Home() {
   return (
-    <>
+    <section className="overflow-x-hidden">
       <Slider/>
       <AdvertisementSection/>
       <Monitoring/>
@@ -16,6 +16,6 @@ export default function Home() {
       <Points/>
       <Learning/>
       <Question/>
-    </>
+    </section>
   )
 }

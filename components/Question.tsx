@@ -91,7 +91,7 @@ export default function Question() {
   }, [])
 
   return (
-    <section className="mb-16 px-5">
+    <section className="mb-16 px-5 overflow-hidden">
       <div ref={ref} className={`transform transition-all text-left space-y-5 duration-1000 ease-out bg-blue-950 rounded-3xl justify-between text-white p-8 md:p-16 gap-8 flex flex-col md:flex-row
         ${visible ? "translate-x-0 opacity-100" : "translate-x-[4rem] opacity-0"}
       `}>
