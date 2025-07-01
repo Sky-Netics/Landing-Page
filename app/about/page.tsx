@@ -17,7 +17,7 @@ export default function AboutUs() {
       <section className="relative">
         <Image
           src={home}
-          alt="Snowflake Logo"
+          alt="RENA LLC Headquarters"
           width={1440}
           height={350}
           className="w-full max-h-screen object-cover object-[30%_70%] opacity-80 brightness-50 hover:brightness-65 transform-all duration-400"
@@ -29,120 +29,115 @@ export default function AboutUs() {
           height={100}
           className="w-full absolute bottom-0"
         />
-        <h1 className="text-4xl text-white font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">ABOUT US</h1>
+        <h1 className="text-4xl text-white font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">ABOUT RENA LLC</h1>
       </section>
+      
       <section className="my-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-10 px-5">
         <div className="text-center text-[#249EDC] place-items-center space-y-2.5">
-          <h6 className="text-4xl font-black">9,437</h6>
-          <h4 className="font-extrabold text-xl">Global customers</h4>
+          <h6 className="text-4xl font-black">34+</h6>
+          <h4 className="font-extrabold text-xl">Years of Experience</h4>
           <p className="text-black">
-            Thousands of organizations around the world rely on Snowflake to unite siloed data, discover and securely share data and execute diverse workloads.
+            Since 1991, RENA LLC has been a trusted bridge in international trade between Armenia, Iran, Russia, and other countries.
           </p>
           <button className="flex items-center gap-x-1.5 font-semibold cursor-pointer hover:text-blue-600">
-            Customer Stories <FaChevronRight className="text-[0.750rem]" />
+            Our History <FaChevronRight className="text-[0.750rem]" />
           </button>
         </div>
         <div className="text-center text-[#249EDC] place-items-center space-y-2.5">
-          <h6 className="text-4xl font-black">4.2B</h6>
-          <h4 className="font-extrabold text-xl">Daily Queries</h4>
+          <h6 className="text-4xl font-black">100+</h6>
+          <h4 className="font-extrabold text-xl">Trusted Partners</h4>
           <p className="text-black">
-            Together, Snowflake customers have more than 4.2 B of data queries on the Data Cloud, with more than 515 million data workloads that run each day.
+            We maintain strong relationships with supermarkets, dairy producers, and distribution networks across multiple countries.
           </p>
           <button className="flex items-center gap-x-1.5 font-semibold cursor-pointer hover:text-blue-600">
-            Snowflake Platform <FaChevronRight className="text-[0.750rem]" />
+            Our Partners <FaChevronRight className="text-[0.750rem]" />
           </button>
         </div>
         <div className="text-center text-[#249EDC] place-items-center space-y-2.5">
-          <h6 className="text-4xl font-black">2,416</h6>
-          <h4 className="font-extrabold text-xl">Marketplace Listings</h4>
+          <h6 className="text-4xl font-black">50+</h6>
+          <h4 className="font-extrabold text-xl">Product Categories</h4>
           <p className="text-black">
-            Find, try and buy ready-to-use data and applications from the Snowflake Marketplace to enhance your data and power innovative business solutions.
+            From dairy products to industrial equipment, we supply diverse high-quality products meeting international standards.
           </p>
           <button className="flex items-center gap-x-1.5 font-semibold cursor-pointer hover:text-blue-600">
-            Snowflake Marketplace <FaChevronRight className="text-[0.750rem]" />
+            Our Products <FaChevronRight className="text-[0.750rem]" />
           </button>
         </div>
       </section>
+
       <section className="py-20 mx-4 px-4 space-y-20">
-        {/* Leadership Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4">
           <h2 className="text-4xl font-bold">
-            <span className="text-[#249EDC]">MEET OUR</span> LEADERSHIP
+            <span className="text-[#249EDC]">OUR</span> LEADERSHIP
           </h2>
-          <p className="text-lg text-gray-600 ">
-            Every employee matters at Snowflake. Meet the team that harnesses
-            all that talent and passion.
+          <p className="text-lg text-gray-600">
+            Meet the visionary team behind RENA LLC's 34 years of successful international trade.
           </p>
         </div>
 
-        {/* Grid Container */}
         <div className="max-w-6xl mx-auto space-y-16">
-          {/* Leadership Team - Image Right */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold">LEADERSHIP TEAM</h3>
+              <h3 className="text-2xl font-bold">MANAGEMENT TEAM</h3>
               <p className="text-gray-600">
-                Snowflake CEO Sridhar Ramaswamy and the rest of our executive
-                team are seasoned experts.
+                Under the leadership of CEO Reza Nazfi, RENA LLC has grown into a premier international trading company.
               </p>
               <button className="bg-[#249EDC] hover:bg-blue-600 text-white font-medium rounded-full px-6 py-3 transition">
-                MEET THE TEAM
+                MEET OUR TEAM
               </button>
             </div>
             <div className="lg:order-last">
               <Image
                 src="/leadership.png"
-                alt="Leadership team"
+                alt="RENA leadership team"
                 width={600}
                 height={400}
-                className="rounded-xl shadow-2xl w-full h-auto object-cover  brightness-60 hover:brightness-80 transition-transform transform hover:scale-103"
+                className="rounded-xl shadow-2xl w-full h-auto object-cover brightness-60 hover:brightness-80 transition-transform transform hover:scale-103"
               />
             </div>
           </div>
 
-          {/* Board of Directors - Image Left */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <Image
                 src="/board.png"
-                alt="Board of directors"
+                alt="RENA operations"
                 width={600}
                 height={400}
                 className="rounded-xl shadow-2xl w-full h-auto object-cover brightness-60 hover:brightness-80 transition-transform transform hover:scale-103"
               />
             </div>
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold">BOARD OF DIRECTORS</h3>
+              <h3 className="text-2xl font-bold">GLOBAL OPERATIONS</h3>
               <p className="text-gray-600">
-                Thanks to the guidance of our board, Snowflake continues to
-                serve customers worldwide.
+                Our international network spans Armenia, Iran, Russia, Ukraine, Georgia, Poland and beyond.
               </p>
               <button className="bg-[#249EDC] hover:bg-blue-600 text-white font-medium rounded-full px-6 py-3 transition">
-                MEET THE TEAM
+                OUR NETWORK
               </button>
             </div>
           </div>
         </div>
       </section>
+
       <section className="py-20">
         <div className="max-w-3xl mx-auto text-center space-y-4 px-4">
-          <h2 className="text-4xl font-bold">OUR VALUES</h2>
+          <h2 className="text-4xl font-bold">OUR CORE VALUES</h2>
           <p className="text-lg text-gray-600">
-            Our values represent who we are, at our best. We seek to exhibit
-            these values every day.
+            These principles guide every aspect of our business operations and relationships.
           </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto px-4 mt-12">
           {[
-            { icon: <TfiCrown />, title: "Integrity Always" },
-            { icon: <VscLaw />, title: "Put Customers First" },
-            { icon: <GiBrain />, title: "Think Big" },
-            { icon: <TfiMedall />, title: "Be Excellent" },
-            { icon: <LuListTodo />, title: "Get It Done" },
-            { icon: <BiDonateHeart />, title: "Own It" },
-            { icon: <IoSnowOutline />, title: "Embrace Differences" },
-            { icon: <TfiCrown />, title: "Customer Focus" },
+            { icon: <TfiCrown />, title: "Quality First" },
+            { icon: <VscLaw />, title: "Integrity Always" },
+            { icon: <GiBrain />, title: "Innovative Solutions" },
+            { icon: <TfiMedall />, title: "International Standards" },
+            { icon: <LuListTodo />, title: "Reliable Delivery" },
+            { icon: <BiDonateHeart />, title: "Customer Focus" },
+            { icon: <IoSnowOutline />, title: "Sustainable Trade" },
+            { icon: <TfiCrown />, title: "Trusted Partnerships" },
           ].map((item, index) => (
             <div
               key={index}
@@ -156,102 +151,107 @@ export default function AboutUs() {
           ))}
         </div>
       </section>
+
       <section className="space-y-20 mb-20">
-        <h2 className="text-3xl font-bold text-center">OUR OFFICES</h2>
+        <h2 className="text-3xl font-bold text-center">OUR GLOBAL PRESENCE</h2>
         <div className="flex px-5 space-x-5 items-center max-w-[1000px] mx-auto">
           <div className="space-y-3">
-            <h4 className="text-xl font-bold">SNOWFLAKE SPANS THE GLOBE</h4>
-            <p>{`We're globally-distributed enterprise, with more than 6,780+ employees working in over 40+ offices worldwide (as of October 2023).`}</p>
+            <h4 className="text-xl font-bold">INTERNATIONAL TRADE NETWORK</h4>
+            <p>With 34 years of experience, RENA LLC has established itself as a key trading bridge between Armenia, Iran, Russia, Ukraine, Georgia, Poland and other countries.</p>
             <button className="bg-[#249EDC] text-white text-sm font-semibold rounded-full py-3 px-5 cursor-pointer hover:bg-blue-600">
-              SEE OUR LOCATIONS
+              CONTACT OUR TEAM
             </button>
           </div>
           <Image
             src="/office.png"
-            alt="Leadership team"
+            alt="RENA global offices"
             width={600}
             height={300}
             className="rounded-xl shadow-2xl w-full h-auto object-cover brightness-60 hover:brightness-80 transition-transform transform hover:scale-103"
           />
         </div>
       </section>
+
       <section className="px-5 lg:px-15 xl:px-25 relative">
-        <Image width={1440} height={300} src="/armenia1.webp" alt="" className="h-64 object-cover object-[50%_80%] brightness-65"/>
-        <h6 className="text-white text-3xl absolute top-1/4 left-1/4">A WORLD-CLASS BUSINESS AND INDUSTRIAL HUB</h6>
+        <Image width={1440} height={300} src="/armenia1.webp" alt="RENA headquarters in Yerevan" className="h-64 object-cover object-[50%_80%] brightness-65"/>
+        <h6 className="text-white text-3xl absolute top-1/4 left-1/4">YEREVAN: OUR STRATEGIC BUSINESS HUB</h6>
       </section>
+
       <section className="px-5 lg:px-15 xl:px-25 my-10">
         <div className="flex flex-col sm:flex-row">
           <div className="w-full sm:w-1/4 mb-6 md:mb-0 relative before:absolute before:top-[-15px] before:left-[-15px] before:border-t-20 before:border-l-6 before:border-gray-200 after:absolute after:top-[-15px] after:left-[-15px] after:border-t-6 after:border-l-20 after:border-gray-200">
             <h2 className="text-4xl font-bold tracking-wider">
               Our
               <br />
-              Services
+              Products
             </h2>
           </div>
           <div className="w-full sm:w-3/4 space-y-10">
             <div>
               <div className="flex justify-between items-center text-orange-400 mb-5">
-                <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">Waste Management</h3>
+                <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">Dairy Products</h3>
                 <RiArrowDropRightLine className="text-5xl border-b-3"/>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-500 text-xl">
                 <div className="flex items-center">
                   <RiArrowDropRightLine className="text-2xl"/>
-                  <span>UCO Collecting</span>
+                  <span>Premium Butter</span>
                 </div>
                 <div className="flex items-center">
                   <RiArrowDropRightLine className="text-2xl"/>
-                  <span>Collect Request</span>
+                  <span>Cream</span>
                 </div>
                 <div className="flex items-center">
                   <RiArrowDropRightLine className="text-2xl"/>
-                  <span>Fresh Pickups</span>
+                  <span>Milk Powder</span>
                 </div>
               </div>
             </div>
             <div>
               <div className="flex justify-between items-center text-green-700 mb-5">
-                <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">International Waste Trade</h3>
+                <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">Industrial Equipment</h3>
                 <RiArrowDropRightLine className="text-5xl border-b-3"/>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-500 text-xl">
                 <div className="flex items-center">
                   <RiArrowDropRightLine className="text-2xl"/>
-                  <span>UCO Collecting</span>
+                  <span>Boiler Systems</span>
                 </div>
                 <div className="flex items-center">
                   <RiArrowDropRightLine className="text-2xl"/>
-                  <span>Collect Request</span>
+                  <span>Refrigeration Units</span>
                 </div>
                 <div className="flex items-center">
                   <RiArrowDropRightLine className="text-2xl"/>
-                  <span>Fresh Pickups</span>
+                  <span>Stainless Steel Tanks</span>
                 </div>
               </div>
             </div>
             <div>
               <div className="flex justify-between items-center mb-5">
-                <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">Oit & Fat Processing</h3>
+                <h3 className="text-3xl font-semibold border-b-3 border-b-gray-200 w-full h-12">Building Materials</h3>
                 <RiArrowDropRightLine className="text-5xl border-b-3"/>
               </div>
             </div>
           </div>
         </div>
       </section>
-    <section className="px-12 sm:px-25 mb-20">
-      <div className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 w-full p-10 sm:pl-32 space-y-5 relative">
-        <Image src="/Untitled2.png" alt="Perfume" width={250} height={250} className="absolute -left-25 -top-5 hidden sm:block"/>
-        <h4 className="text-3xl font-semibold">Need to trade your International Waste?</h4>
-        <p className="text-gray-500">We are here for you to offer Lorem ipsum dolor sit amet, con sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-        <button className="border-b-2 cursor-pointer text-green-600 hover:text-green-800">Read More Here</button>
-      </div>
-    </section>
+
+      <section className="px-12 sm:px-25 mb-20">
+        <div className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 w-full p-10 sm:pl-32 space-y-5 relative">
+          <Image src="/Untitled2.png" alt="RENA products" width={250} height={250} className="absolute -left-25 -top-5 hidden sm:block"/>
+          <h4 className="text-3xl font-semibold">Need premium dairy products or industrial equipment?</h4>
+          <p className="text-gray-500">With 34 years of experience in international trade, we guarantee quality, reliability and competitive pricing.</p>
+          <button className="border-b-2 cursor-pointer text-green-600 hover:text-green-800">Contact Us Today</button>
+        </div>
+      </section>
+
       <section className="md:space-x-4 space-y-4">
         <div className="relative w-full py-8 px-5 md:px-8 overflow-hidden">
           <div className="absolute inset-0 w-full h-full">
             <Image
               src="/armenia2.jpg"
-              alt="City background"
+              alt="Yerevan business district"
               fill
               sizes="100vw"
               priority
@@ -264,7 +264,7 @@ export default function AboutUs() {
 
           <div className="relative z-10 max-w-6xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-white mt-4 mb-10">
-              How UCO collection works?
+              How we ensure quality in our supply chain?
             </h2>
 
             <div className="md:hidden space-y-6 space-x-16">
@@ -284,10 +284,10 @@ export default function AboutUs() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Schedule
+                    Supplier Selection
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Schedule your desired time via website, app, or phone.
+                    We partner only with reputable international manufacturers meeting strict quality standards.
                   </p>
                 </div>
               </div>
@@ -308,11 +308,10 @@ export default function AboutUs() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Contract and Bin Delivery
+                    Quality Certification
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Our representative will arrive at the agreed time for
-                    contract signing and bin handover.
+                    All products come with international certificates ensuring compliance with health and safety standards.
                   </p>
                 </div>
               </div>
@@ -333,11 +332,10 @@ export default function AboutUs() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Rewards & Fresh Pickups
+                    Reliable Logistics
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Cash, bank transfers, or a wide range of competitively
-                    priced fresh products.
+                    We maintain temperature-controlled supply chains for dairy products and secure transport for industrial equipment.
                   </p>
                 </div>
               </div>
@@ -358,11 +356,10 @@ export default function AboutUs() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Regular Collection Day
+                    Customer Support
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Routine visits for oil collection at scheduled intervals or
-                    based on your needs.
+                    Our team provides ongoing support to ensure complete satisfaction with every order.
                   </p>
                 </div>
               </div>
@@ -427,44 +424,40 @@ export default function AboutUs() {
                 </div>
               </div>
 
-              {/* Text content */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-4">
                 <div className="text-center">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Schedule
+                    Supplier Selection
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Schedule your desired time via website, app, or phone.
+                    Partnering with reputable international manufacturers.
                   </p>
                 </div>
 
                 <div className="text-center">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Contract and Bin Delivery
+                    Quality Certification
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Our representative will arrive at the agreed time for
-                    contract signing and bin handover.
+                    All products come with international certificates.
                   </p>
                 </div>
 
                 <div className="text-center">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Rewards & Fresh Pickups
+                    Reliable Logistics
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Cash, bank transfers, or a wide range of competitively
-                    priced fresh products.
+                    Temperature-controlled supply chains.
                   </p>
                 </div>
 
                 <div className="text-center">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    Regular Collection Day
+                    Customer Support
                   </h3>
                   <p className="text-gray-300 text-sm">
-                    Routine visits for oil collection at scheduled intervals or
-                    based on your needs.
+                    Ongoing support for complete satisfaction.
                   </p>
                 </div>
               </div>
@@ -472,50 +465,46 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
-            <div className=" space-x-2 space-y-16">
-              <h2 className="text-3xl md:text-3xl  font-bold text-slate-800">
-                Who we are?
+            <div className="space-x-2 space-y-16">
+              <h2 className="text-3xl md:text-3xl font-bold text-slate-800">
+                Who is RENA LLC?
               </h2>
               <p className="text-slate-600 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               
+                Established in 1991, RENA LLC has grown into a premier international trading company specializing in high-quality dairy products, industrial equipment, and building materials. With our headquarters in Yerevan, Armenia, we serve clients across multiple countries with reliability and excellence.
               </p>
               <div>
                 <Link
                   href="/about"
                   className="inline-block px-6 py-3 bg-slate-600 text-white font-medium rounded-md hover:bg-slate-700 transition-colors"
                 >
-                  Learn More
+                  Our Full Story
                 </Link>
               </div>
             </div>
 
             <div className="space-y-6">
               <div>
-
-              
                 <div className="relative bg-gray-100 p-6 rounded-lg">
-                    <div className="absolute -top-1 -right-1 w-8 h-8">
+                  <div className="absolute -top-1 -right-1 w-8 h-8">
                     <div className="absolute top-0 right-0 w-8 h-2 bg-black"></div>
                     <div className="absolute top-0 right-0 w-2 h-8 bg-black"></div>
-                    </div>
-                    <div className="flex justify-between items-center">
+                  </div>
+                  <div className="flex justify-between items-center">
                     <div>
-                        <h3 className="text-lg font-semibold text-slate-800">
-                        Vans & Drivers
-                        </h3>
+                      <h3 className="text-lg font-semibold text-slate-800">
+                        Years in Business
+                      </h3>
                     </div>
                     <div>
-                        <span className="text-4xl font-bold text-slate-800">
-                        230+
-                        </span>
+                      <span className="text-4xl font-bold text-slate-800">
+                        34+
+                      </span>
                     </div>
-                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -529,12 +518,12 @@ export default function AboutUs() {
                     <h3 className="text-lg font-semibold text-slate-800">
                       International
                       <br />
-                      Clients
+                      Markets
                     </h3>
                   </div>
                   <div>
                     <span className="text-4xl font-bold text-green-500">
-                      230+
+                      7+
                     </span>
                   </div>
                 </div>
@@ -548,14 +537,14 @@ export default function AboutUs() {
                 <div className="flex justify-between items-center">
                   <div>
                     <h3 className="text-lg font-semibold text-slate-800">
-                      UCO
+                      Product
                       <br />
-                      Collection
+                      Categories
                     </h3>
                   </div>
                   <div>
                     <span className="text-4xl font-bold text-yellow-500">
-                      230+
+                      50+
                     </span>
                   </div>
                 </div>
@@ -564,13 +553,14 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+
       <section className="h-80 bg-[#11567F] content-center">
         <div className="flex max-w-[1000px] mx-auto items-center flex-col gap-y-10">
-          <h2 className="text-white text-3xl font-semibold flex">POLICES</h2>
+          <h2 className="text-white text-3xl font-semibold flex">OUR COMMITMENTS</h2>
           <div className="grid sm:grid-cols-2 space-x-10 w-full">
             <div className="bg-white rounded space-y-3 p-8 border-b-6 border-[#249EDC]">
               <h4 className="text-xl font-semibold">
-                Global Code of Conduct and Ethics
+                Quality Assurance Policy
               </h4>
               <button className="flex items-center gap-x-2 text-[#249EDC] text-sm font-semibold cursor-pointer hover:text-blue-600">
                 Read More <FaChevronRight />
@@ -578,7 +568,7 @@ export default function AboutUs() {
             </div>
             <div className="bg-white rounded space-y-3 p-8 border-b-6 border-[#249EDC]">
               <h4 className="text-xl font-semibold">
-                Business Partner Standards of Conduct
+                International Trade Standards
               </h4>
               <button className="flex items-center gap-x-2 text-[#249EDC] text-sm font-semibold cursor-pointer hover:text-blue-600">
                 Read More <FaChevronRight />

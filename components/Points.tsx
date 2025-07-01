@@ -3,17 +3,38 @@ import Image from "next/image"
 export default function Points() {
   return (
     <div className="px-6 relative flex justify-center items-center h-full sm:h-[550px]">
-      <Image src="/supermarket.png" alt="Blue Home" width={1600} height={50} className="h-full sm:h-[550px] absolute left-0 right-0"/>
-      <div className="my-5 sm:my-0 p-6 sm:p-24 rounded-3xl relative bg-white z-10 max-w-[700px] space-y-5">
-        <div className="bg-blue-400 absolute left-[-125px] top-[-90px] py-8 px-20 rounded-3xl text-white hidden lg:block">
-          <h6 className="text-[56px] font-medium">105</h6>
-          <p className="text-center text-lg font-semibold">points</p>
+      <Image 
+        src="/supermarket.png"
+        alt="RENA Dairy Warehouse" 
+        fill
+        className="object-cover absolute left-0 right-0"
+        quality={100}
+      />
+      <div className="my-5 sm:my-0 p-6 sm:p-16 rounded-3xl relative bg-white/95 z-10 max-w-[800px] space-y-6 backdrop-blur-sm">
+        <div className="bg-blue-600 absolute left-[-125px] top-[-90px] py-6 px-16 rounded-3xl text-white hidden lg:block shadow-xl">
+          <h6 className="text-[56px] font-bold">34</h6>
+          <p className="text-center text-lg font-semibold">years</p>
         </div>
-        <h2 className="text-4xl font-medium">
-          Users have seen their scores <span className="text-blue-400">increase by over 105 points</span>
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
+          <span className="text-blue-600">RENA International</span> with 34 years of global trade expertise
         </h2>
-        <p className="font-normal">By reporting your rent payments, you can possibly benefit like our other users that have seen an increase in their credit score. These increases have helped our users qualify for a home loan sooner than without reporting their rent. In some cases, users have gone from not qualifying for a home loan, to getting pre-qualified in just one reporting cycle.</p>
+        <p className="font-medium text-gray-600 leading-relaxed">
+          Since 1991, RENA has established itself as a trusted bridge between international suppliers and regional markets. Our extensive network and quality assurance processes ensure premium dairy products and industrial equipment reach our partners with unmatched reliability.
+        </p>
+        <div className="flex flex-wrap gap-4 pt-4">
+          <div className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">
+            Quality Certified
+          </div>
+          <div className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">
+            On-Time Delivery
+          </div>
+          <div className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">
+            Competitive Pricing
+          </div>
+        </div>
       </div>
     </div>
   )
 }
+
+

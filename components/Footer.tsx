@@ -1,155 +1,158 @@
 import React from "react";
 import Link from "next/link";
-import { FaInstagram, FaApple, FaGooglePlay, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaLinkedin, FaTelegram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className="bg-black text-white min-h-screen py-12 px-4 sm:px-8">
+    <div className="bg-gray-900 text-white min-h-screen py-12 px-4 sm:px-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
-          Benefits you and<br/> your employees<br/> will love using
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-left">
+          Specialized solutions in dairy<br/> and food industry<br/> with 34 years of experience
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-20">
-          <div>
+          <div className="text-left">
             <h2 className="text-xl md:text-2xl font-bold mb-6">
               <Link href="/" className="hover:text-white/80 transition-colors">
-                Kota
+                RENA Company
               </Link>
             </h2>
-            <div className="flex gap-4 mt-48">
-              <Link href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
-                <FaApple className="text-xl hover:text-white/80 transition-colors" />
+            <p className="text-white/60 mb-4">
+              Armenia, Yerevan, Davtashen district<br/>
+              A. Mikoyan street, Building 22/1<br/>
+              Postal code: 0054
+            </p>
+            <div className="flex gap-4 mt-8 justify-start">
+              <Link href="https://wa.me/37444155145" target="_blank" rel="noopener noreferrer">
+                <FaWhatsapp className="text-xl hover:text-white/80 transition-colors" />
               </Link>
-              <Link href="https://play.google.com/" target="_blank" rel="noopener noreferrer">
-                <FaGooglePlay className="text-xl hover:text-white/80 transition-colors" />
+              <Link href="https://t.me/renagroup" target="_blank" rel="noopener noreferrer">
+                <FaTelegram className="text-xl hover:text-white/80 transition-colors" />
               </Link>
-              <Link href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.instagram.com/rena_group" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="text-xl hover:text-white/80 transition-colors" />
               </Link>
-              <Link href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.linkedin.com/company/rena-group" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className="text-xl hover:text-white/80 transition-colors" />
+              </Link>
+              <Link href="mailto:rena_eas2015@yahoo.com" target="_blank" rel="noopener noreferrer">
+                <MdEmail className="text-xl hover:text-white/80 transition-colors" />
               </Link>
             </div>
           </div>
 
-          <div className="border-l border-white/30 pl-6">
+          <div className="border-l border-white/30 pl-6 text-left">
             <h3 className="text-lg font-semibold mb-4">
-              <Link href="/solutions" className="hover:text-white/80 transition-colors">
-                Solution
+              <Link href="/products" className="hover:text-white/80 transition-colors">
+                Products
               </Link>
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/solutions/health-insurance" className="text-white/60 hover:text-white/80 transition-colors">
-                  Health insurance
+                <Link href="/products/butter" className="text-white/60 hover:text-white/80 transition-colors">
+                  Premium Butter
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/pension-contribution" className="text-white/60 hover:text-white/80 transition-colors">
-                  Pension contribution
+                <Link href="/products/cream" className="text-white/60 hover:text-white/80 transition-colors">
+                  Fresh Cream
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/life-assurance" className="text-white/60 hover:text-white/80 transition-colors">
-                  Life assurance
+                <Link href="/products/milk-powder" className="text-white/60 hover:text-white/80 transition-colors">
+                  Milk Powder
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/flexible-benefits" className="text-white/60 hover:text-white/80 transition-colors">
-                  Flexible benefits
+                <Link href="/products/industrial" className="text-white/60 hover:text-white/80 transition-colors">
+                  Industrial Equipment
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="border-l border-white/30 pl-6">
+          <div className="border-l border-white/30 pl-6 text-left">
             <h3 className="text-lg font-semibold mb-4">
-              <Link href="/company" className="hover:text-white/80 transition-colors">
-                Company
+              <Link href="/services" className="hover:text-white/80 transition-colors">
+                Services
               </Link>
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/careers" className="text-white/60 hover:text-white/80 transition-colors">
-                  Careers (We are hiring!)
+                <Link href="/services/import" className="text-white/60 hover:text-white/80 transition-colors">
+                  Specialized Import
                 </Link>
               </li>
               <li>
-                <Link href="/help-center" className="text-white/60 hover:text-white/80 transition-colors">
-                  Help Centre
+                <Link href="/services/quality-control" className="text-white/60 hover:text-white/80 transition-colors">
+                  Quality Control
                 </Link>
               </li>
               <li>
-                <Link href="/trust-center" className="text-white/60 hover:text-white/80 transition-colors">
-                  Trust Centre
+                <Link href="/services/customs" className="text-white/60 hover:text-white/80 transition-colors">
+                  Customs Services
                 </Link>
               </li>
               <li>
-                <Link href="/security" className="text-white/60 hover:text-white/80 transition-colors">
-                  Security
+                <Link href="/services/logistics" className="text-white/60 hover:text-white/80 transition-colors">
+                  Logistics & Shipping
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="border-l border-white/30 pl-6">
+          <div className="border-l border-white/30 pl-6 text-left">
             <h3 className="text-lg font-semibold mb-4">
-              <Link href="/resources" className="hover:text-white/80 transition-colors">
-                Resources
+              <Link href="/about" className="hover:text-white/80 transition-colors">
+                About Us
               </Link>
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/resources/europe-benefits-report" className="text-white/60 hover:text-white/80 transition-colors">
-                  Employee benefits in Europe report
+                <Link href="/about/history" className="text-white/60 hover:text-white/80 transition-colors">
+                  Company History
                 </Link>
               </li>
               <li>
-                <Link href="/resources/ireland-enrolment-guide" className="text-white/60 hover:text-white/80 transition-colors">
-                  Auto Enrolment Ireland 2025 Guide
+                <Link href="/about/certificates" className="text-white/60 hover:text-white/80 transition-colors">
+                  Certificates
                 </Link>
               </li>
               <li>
-                <Link href="/resources/global-benefits" className="text-white/60 hover:text-white/80 transition-colors">
-                  Global employee benefits
+                <Link href="/about/partners" className="text-white/60 hover:text-white/80 transition-colors">
+                  Business Partners
                 </Link>
               </li>
               <li>
-                <Link href="/resources/ireland-pension" className="text-white/60 hover:text-white/80 transition-colors">
-                  Occupational pension in Ireland
+                <Link href="/contact" className="text-white/60 hover:text-white/80 transition-colors">
+                  Contact Us
                 </Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-24 text-white/60 text-sm">
-          <p>© Copyright 2025 - Built with love from Europe ©</p>
+        <div className="mt-24 text-white/60 text-sm text-left">
+          <p>© All rights reserved for RENA Company - 2024</p>
           <p className="mt-4">
-            Source: Sustainable Limited, including the focus on sustainable non-canonical food of Ireland. Consumer Information: The Fellow Registered Office 2019 Digital Print Listed Code No. 1, 2020 Digital Print List.
+            RENA International Trading Company with 34 years of brilliant experience, providing quality products in food, industrial and construction sectors with guaranteed quality and competitive prices
           </p>
           <p className="mt-2">
-            Source: Financial, Environmental, and Social Media, Inc., representing the largest global of Finnish Filled Lifestyle (Filled) products for sustainable non-canonical food and food industry.
+            Tax ID: 01828278 | Phone: +374 11 700066 | WhatsApp: +374 44 155145
           </p>
-          <div className="mt-6 flex flex-wrap gap-4">
-            <Link href="/terms-of-service" className="hover:text-white/80 transition-colors">
-              Terms of service
+          <div className="mt-6 flex flex-wrap gap-4 justify-start">
+            <Link href="/terms" className="hover:text-white/80 transition-colors">
+              Terms of Use
             </Link>
-            <Link href="/privacy-policy" className="hover:text-white/80 transition-colors">
-              Privacy policy
+            <Link href="/privacy" className="hover:text-white/80 transition-colors">
+              Privacy Policy
             </Link>
-            <Link href="/terms-of-business" className="hover:text-white/80 transition-colors">
-              Terms of business
+            <Link href="/rules" className="hover:text-white/80 transition-colors">
+              Rules & Regulations
             </Link>
-            <Link href="/fees-charges" className="hover:text-white/80 transition-colors">
-              Schedule of fees and charges
-            </Link>
-            <Link href="/remuneration" className="hover:text-white/80 transition-colors">
-              Remuneration
-            </Link>
-            <Link href="/regulatory-info" className="hover:text-white/80 transition-colors">
-              Regulatory information
+            <Link href="/export-policy" className="hover:text-white/80 transition-colors">
+              Export Policies
             </Link>
           </div>
         </div>

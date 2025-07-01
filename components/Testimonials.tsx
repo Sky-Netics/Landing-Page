@@ -4,54 +4,70 @@ import { motion } from 'framer-motion'
 import Comment from "@/components/Comment"
 
 export default function Testimonials() {
-  const comments= [
+  const comments = [
     {
-      person: "Paula S",
-      description: "Bernie is always knowledgeable and helpful! She is always quick to answer questions and concerns. Looking forward to purchasing a home when we are finished, and Bernie and HomeLoanGurus are helping me reach that goal!"
+      person: "Michael T.",
+      company: "Dairy Distributor",
+      description: "RENA's butter imports have been consistently high-quality. Their documentation is always complete and deliveries arrive on schedule. We've been partners for 5 years and couldn't be happier with their service."
     },
     {
-      person: "Karem L H",
-      description: "Bernie is very good at her job! She can answer your questions & calm your concerns! Very helpful. Very responsive & on time. She does what she says she will do, in the timeframe of when she says it will happen, very ethical & honest. She’s a keeper and she SHOULD be well compensated for her work & commitment!"
+      person: "Sarah K.",
+      company: "Bakery Chain",
+      description: "The fresh cream from RENA has transformed our pastry quality. Their customer service team is extremely responsive - we get answers to our inquiries within hours, not days."
     },
     {
-      person: "Kiva T",
-      description: "My experience with Home Loan Gurus has been amazing. They were attentive and quickly responsive. Bernie has helped me tremendously. I would recommend them too everyone."
+      person: "David R.",
+      company: "Food Processing Plant",
+      description: "As an industrial buyer, I appreciate RENA's rigorous quality control. They've never missed a delivery deadline, and their pricing remains competitive year after year."
     },
     {
-      person: "Daniel F",
-      description: "This company has really gone out of their way to help us navigate through the home buying process not only giving personal attention but being there when we have questions and concerns. Bernie has been amazing!!! Thanks for everything!!!!"
+      person: "Jennifer L.",
+      company: "Restaurant Group",
+      description: "Working with RENA has simplified our supply chain. Their one-stop solution for dairy products and equipment has reduced our vendor management overhead by 30%."
     },
     {
-      person: "Brenda H",
-      description: "Very professional but super personable. I felt safe to work along side Bernie to get my credit back to good!"
+      person: "Robert M.",
+      company: "Import/Export Firm",
+      description: "RENA's knowledge of international food standards is impressive. They navigated complex customs regulations for us, saving weeks of paperwork delays."
     },
     {
-      person: "Eric P",
-      description: "Bernie does a great job. Got me connected with a lender and I bought a home when no one else would work with me. Thanks!"
+      person: "Emily S.",
+      company: "Hotel Chain",
+      description: "The consistency of RENA's products allows us to standardize our recipes across all locations. Their reliability gives us peace of mind for our banquet operations."
     }
   ]
 
   const duplicatedComments = [...comments, ...comments, ...comments, ...comments]
 
   return (
-    <section className="space-y-10 my-16">
-      <h2 className="text-[40px] text-center">Customer Testimonials</h2>
+    <section className="space-y-10 my-16 px-5">
+      <div className="text-center space-y-4">
+        <h2 className="text-3xl md:text-[40px] font-bold">Client Testimonials</h2>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          Hear what our partners say about working with RENA International
+        </p>
+      </div>
       <div className="overflow-hidden">
         <motion.div
-          className="flex gap-x-4"
+          className="flex gap-x-6"
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{
             x: {
               repeat: Number.POSITIVE_INFINITY,
               repeatType: "loop",
-              duration: typeof window !== "undefined" && window.innerWidth> 640 ? 30 : 10,
+              duration: typeof window !== "undefined" && window.innerWidth > 640 ? 40 : 20,
               ease: "linear"
             }
           }}
         >
           {duplicatedComments.map((comment, index) => (
-            <Comment key={index} person={comment.person} description={comment.description}/>
+            <Comment 
+              key={index} 
+              person={comment.person} 
+              company={comment.company}
+              description={comment.description}
+            />
           ))}
         </motion.div>
       </div>

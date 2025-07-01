@@ -10,37 +10,74 @@ import { motion } from "framer-motion";
 
 export default function MeetingSection() {
   return (
-    <section className="min-h-screen px-4 py-12 sm:py-0 bg-[#cee4e1] flex items-center">
+    <section className="min-h-screen px-4 py-12 sm:py-0 bg-[#cee4e1] flex items-center overflow-hidden">
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="space-y-4 sm:space-y-6 order-1 lg:order-none">
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-thin leading-tight text-gray-900/90">
-              Help your portfolio companies with strategy.{" "}
-              <span className="font-bold text-black underline decoration-dotted underline-offset-4 decoration-green-700">
-                Leave the vendor management to us.
-              </span>
-            </h3>
-
-            <p className="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed">
-              We&apos;ll take on the grunt work of onboarding and verifying vendors and managing benefits and deals. You help
-              your portcos make smarter decisions.
-            </p>
-
-            <p className="text-sm sm:text-base lg:text-lg text-gray-700">
-              Sounds too good to be true? <strong className="font-bold text-gray-900">See Proven in action.</strong>
-            </p>
-
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 sm:gap-3 bg-green-600 hover:bg-green-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors duration-200 text-sm sm:text-base"
+          {/* Left Content */}
+          <motion.div 
+            className="space-y-4 sm:space-y-6 order-1 lg:order-none"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.h3
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: false, margin: "-100px" }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="text-2xl sm:text-3xl lg:text-4xl font-thin leading-tight text-gray-900/90"
             >
-              <span>Book a meeting today</span>
-              <SlCalender className="w-4 h-4 sm:w-5 sm:h-5" />
-            </Link>
-          </div>
+              Trusted international trade since 1991.{" "}
+              <span className="font-bold text-black underline decoration-dotted underline-offset-4 decoration-green-700">
+                Quality that speaks for itself.
+              </span>
+            </motion.h3>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, margin: "-100px" }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed"
+            >
+              RENA LLC specializes in premium dairy products, industrial equipment, and building materials, serving clients across Armenia, Iran, Russia, and beyond with reliable international trade solutions.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, margin: "-100px" }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="text-sm sm:text-base lg:text-lg text-gray-700"
+            >
+              Want to experience our quality products? <strong className="font-bold text-gray-900">See RENA in action.</strong>
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, margin: "-100px" }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 sm:gap-3 bg-green-600 hover:bg-green-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors duration-200 text-sm sm:text-base"
+              >
+                <span>Request a quote today</span>
+                <SlCalender className="w-4 h-4 sm:w-5 sm:h-5" />
+              </Link>
+            </motion.div>
+          </motion.div>
 
           {/* Right Images */}
-          <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] order-0 lg:order-none">
+          <motion.div 
+            className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] order-0 lg:order-none"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
             {/* Background Pattern */}
             <div className="absolute inset-0 z-0 overflow-hidden">
               <Image
@@ -53,43 +90,53 @@ export default function MeetingSection() {
             </div>
 
             <div className="relative h-full flex items-end justify-end p-2 sm:p-4">
-              <div className="relative w-full h-full max-w-[95%]">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: false, margin: "-100px" }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="relative w-full h-full max-w-[95%]"
+              >
                 <Image
                   src={supermarket}
-                  alt="Supermarket scene"
+                  alt="RENA LLC international trade products"
                   fill
                   className="object-cover rounded-lg shadow-xl"
                   quality={80}
                   priority
                 />
-              </div>
+              </motion.div>
             </div>
 
+            {/* Popular Products Card */}
             <motion.div
               initial={{ opacity: 0, x: -30, y: -10 }}
-              animate={{ opacity: 1, x: 0, y: 0 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              viewport={{ once: false, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.3 }}
               whileHover={{ scale: 1.03, y: -3 }}
               className="absolute top-1 left-1 sm:top-4 sm:left-4 z-20 bg-white/95 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-md sm:shadow-lg border border-gray-200 p-2 sm:p-4 w-[140px] sm:w-[180px] md:w-[200px] lg:w-[220px] cursor-pointer"
             >
               <motion.h2
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: false, margin: "-100px" }}
                 transition={{ delay: 0.5 }}
                 className="text-xs sm:text-sm font-semibold text-gray-900 text-center border-b border-gray-200 pb-1 sm:pb-2 mb-2 sm:mb-3"
               >
-                Most Popular Profiles
+                Our Top Products
               </motion.h2>
               <div className="space-y-1 sm:space-y-2">
                 {[
-                  { icon: <SiZendesk className="text-purple-600 text-xs sm:text-sm" />, name: "Zendesk", bg: "bg-purple-100", delay: 0.6 },
-                  { icon: <SiMailchimp className="text-yellow-600 text-xs sm:text-sm" />, name: "Mailchimp", bg: "bg-yellow-100", delay: 0.8 },
-                  { icon: <IoLogoSlack className="text-purple-600 text-xs sm:text-sm" />, name: "Slack", bg: "bg-purple-100", delay: 1.0 },
+                  { icon: "🥛", name: "Premium Butter", bg: "bg-yellow-100", delay: 0.6 },
+                  { icon: "🧀", name: "Dairy Cream", bg: "bg-blue-100", delay: 0.8 },
+                  { icon: "🏗️", name: "Boiler Systems", bg: "bg-red-100", delay: 1.0 },
                 ].map((item, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false, margin: "-100px" }}
                     transition={{ delay: item.delay }}
                     whileHover={{ x: 3 }}
                     className="flex items-center gap-2 sm:gap-3"
@@ -103,31 +150,35 @@ export default function MeetingSection() {
               </div>
             </motion.div>
 
+            {/* Trade Analytics Card */}
             <motion.div
               initial={{ opacity: 0, x: 30, y: 10 }}
-              animate={{ opacity: 1, x: 0, y: 0 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              viewport={{ once: false, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.4 }}
               whileHover={{ scale: 1.03, y: -3 }}
               className="absolute bottom-1 right-1 sm:bottom-4 sm:right-4 z-30 bg-white/95 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-md sm:shadow-lg border border-gray-200 p-2 sm:p-4 w-[150px] sm:w-[180px] md:w-[220px] lg:w-[250px] cursor-pointer"
             >
               <motion.h3
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: false, margin: "-100px" }}
                 transition={{ delay: 0.6 }}
                 className="text-xs sm:text-sm font-semibold text-gray-900 mb-2 sm:mb-3"
               >
-                Vendor Analytics
+                Trade Analytics
               </motion.h3>
               <div className="space-y-1 sm:space-y-2">
                 {[
-                  { label: "Active Vendors", value: "247", delay: 0.7 },
-                  { label: "Cost Savings", value: "$2.4M", delay: 0.9 },
-                  { label: "Compliance Rate", value: "98%", delay: 1.1 },
+                  { label: "Years in Business", value: "34+", delay: 0.7 },
+                  { label: "Countries Served", value: "7+", delay: 0.9 },
+                  { label: "Product Categories", value: "50+", delay: 1.1 },
                 ].map((metric) => (
                   <motion.div
                     key={metric.label}
                     initial={{ opacity: 0, y: 5 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, margin: "-100px" }}
                     transition={{ delay: metric.delay }}
                     className="flex justify-between items-center"
                   >
@@ -139,7 +190,8 @@ export default function MeetingSection() {
                 ))}
                 <motion.div
                   initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: false, margin: "-100px" }}
                   transition={{ delay: 1.3, duration: 0.6 }}
                   className="w-full bg-gray-200 rounded-full h-1.5 sm:h-2 mt-2 sm:mt-3 origin-left"
                 >
@@ -147,7 +199,7 @@ export default function MeetingSection() {
                 </motion.div>
               </div>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
